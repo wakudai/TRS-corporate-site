@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>株式会社TRS | お問い合わせ</title>
+    <meta name="description" content="お問い合わせフォーム" />
+    <!-- 外部ファイルの読み込み -->
+    <script src="【ファイルのURL】"></script>
+    <link rel="stylesheet" href="./css/app.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/rmg0sgc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <!-- アイコン -->
+    <link rel="shortcut icon" href="./images/TRS_logo.png" />
+    <link rel="apple-touch-icon-precomposed" href="【画像のパス/apple-touch-icon-precomposed.png】" />
+    <!-- クローラーの制御の設定 -->
+    <meta name="robots" content="noindex , nofollow" />
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header_logo">
+        <img src="../images/logo.png" alt="株式会社TRSの会社ロゴ">
+      </div>
+      <div class="header_nav">
+        <nav class="gnav">
+          <ul class="gnav_list">
+            <li class="gnav_list--item"><a href="" class="gnav-link en">TOP</a></li>
+            <li class="gnav_list--item"><a href="" class="gnav-link ja">事業内容</a></li>
+            <li class="gnav_list--item"><a href="" class="gnav-link ja">企業情報</a></li>
+            <li class="gnav_list--item"><a href="contact.html" class="gnav-link ja">お問い合わせ</a></li>
+            <li class="gnav_list--item"><a href="" class="gnav-link ja">個人情報保護方針</a></li>
+          </ul>
+        </nav>
+        <button type="button" class="btn_menu" id="js-btnMenu">
+          <span class="btn_menu--line"></span>
+        </button>
+      </div>
+      <p class="pc-copyRight en">&copy;2023 TRS Inc. All Rights Reserved.</p>
+    </header>
+    <main>
+      <div class="kv">
+        <div class="kv_clear--box"></div>
+        <p class="kv_ttl ja">お問い合わせ</p>
+      </div>
+        <div class="contact_wrapper">
+          <div class="contact_ttlArea">
+            <h1 class="contact_ttl ja">お問い合わせ</h1>
+          </div>
+        </div>
+        <div class="contact_btn">
+          <button class="contact_private ja" id="js-privateBtn" type="button">
+            一般問い合わせ
+          </button>
+          <button class="contact_company ja" id="js-companyBtn" type="button">
+            法人問い合わせ
+          </button>
+        </div>
+        <!-- 一般のお問い合わせ -->
+        <div id="js-privateForm" class="contact_private--form">
+          <form class="form" action="privateForm.php" method="post">
+            <input type="hidden" name="token" value="">
+            <div class="form_item">
+              <p class="form_label">
+                <label>お名前</label>
+                <span class="form_required">*</span>
+              </p>
+              <input type="text" class="form_input" required name="name" placeholder="山田 太郎" />
+              <div class="form_error">
+                必須項目です入力してください
+              </div>
+            </div>
+            <div class="form_item">
+              <p class="form_label">
+                <label name="name_kana">年齢</label>
+                <span class="form_required">*</span>
+              </p>
+              <select name="num" class="form_pulldown">
+                <option value="">-</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+                <option value="32">32</option>
+                <option value="33">33</option>
+                <option value="34">34</option>
+                <option value="35">35</option>
+                <option value="36">36</option>
+                <option value="37">37</option>
+                <option value="38">38</option>
+                <option value="39">39</option>
+                <option value="40">40</option>
+                <option value="41">41</option>
+                <option value="42">42</option>
+                <option value="43">43</option>
+                <option value="44">44</option>
+                <option value="45">45</option>
+                <option value="46">46</option>
+                <option value="47">47</option>
+                <option value="48">48</option>
+                <option value="49">49</option>
+                <option value="50">50</option>
+                <option value="51">51</option>
+                <option value="52">52</option>
+                <option value="53">53</option>
+                <option value="54">54</option>
+                <option value="55">55</option>
+                <option value="56">56</option>
+                <option value="57">57</option>
+                <option value="58">58</option>
+                <option value="59">59</option>
+                <option value="60">60</option>
+                <option value="61">61</option>
+                <option value="62">62</option>
+                <option value="63">63</option>
+                <option value="64">64</option>
+                <option value="65">65</option>
+                <option value="66">66</option>
+                <option value="67">67</option>
+                <option value="68">68</option>
+                <option value="69">69</option>
+                <option value="70">70</option>
+                <option value="71">71</option>
+                <option value="72">72</option>
+                <option value="73">73</option>
+                <option value="74">74</option>
+                <option value="75">75</option>
+                <option value="76">76</option>
+                <option value="77">77</option>
+                <option value="78">78</option>
+                <option value="79">79</option>
+                <option value="80">80</option>
+                <option value="81">81</option>
+                <option value="82">82</option>
+                <option value="83">83</option>
+                <option value="84">84</option>
+                <option value="85">85</option>
+                <option value="86">86</option>
+                <option value="87">87</option>
+                <option value="88">88</option>
+                <option value="89">89</option>
+                <option value="90">90</option>
+                <option value="91">91</option>
+                <option value="92">92</option>
+                <option value="93">93</option>
+                <option value="94">94</option>
+                <option value="95">95</option>
+                <option value="96">96</option>
+                <option value="97">97</option>
+                <option value="98">98</option>
+                <option value="99">99</option>
+                </select>　歳
+              <div class="form_error">
+                必須項目です入力してください
+              </div>
+            </div>
+            <div class="form_item">
+              <p class="form_label">
+                <label>メールアドレス</label>
+                <span class="form_required">*</span>
+              </p>
+              <input type="email" class="form_input" required name="email" />
+              <div class="form_error">
+                必須項目です入力してください
+              </div>
+            </div>
+            <div class="form_item">
+              <p class="form_label">
+                <label>電話番号</label>
+                <span class="form_required">*</span>
+              </p>
+              <input type="number" class="form_input" required name="phone" placeholder="00-0000-0000" />
+              <div class="form_error">
+                必須項目です入力してください
+              </div>
+            </div>
+            <div class="form_item">
+              <p class="form_label isMsg">
+                <label>ご要望等(メッセージ)</label>
+                <span class="form_required">*</span>
+              </p>
+              <textarea class="form_textarea" required name="content" placeholder="メッセージをご入力ください"></textarea>
+            </div>
+            <button type="submit" class="form_btn">確認画面へ</button>
+          </form>
+        </div>
+        <!-- 企業のお問い合わせ -->
+        <div id="js-companyForm" class="contact_company--form">
+          <form class="form" action="companyForm.php" method="post">
+            <input type="hidden" name="token" value="">
+            <div class="form_item">
+              <p class="form_label">
+                <label>企業名</label>
+                <span class="form_required">*</span>
+              </p>
+              <input type="text" class="form_input" required name="company_name" placeholder="株式会社TRS" />
+              <div class="form_error">
+                必須項目です入力してください
+              </div>
+            </div>
+            <div class="form_item">
+              <p class="form_label">
+                <label>代表者名</label>
+                <span class="form_required">*</span>
+              </p>
+              <input type="text" class="form_input" required name="name" placeholder="山田 太郎" />
+              <div class="form_error">
+                必須項目です入力してください
+              </div>
+            </div>
+            <div class="form_item">
+              <p class="form_label">
+                <label>メールアドレス</label>
+                <span class="form_required">*</span>
+              </p>
+              <input type="email" class="form_input" required name="email" />
+              <div class="form_error">
+                必須項目です入力してください
+              </div>
+            </div>
+            <div class="form_item">
+              <p class="form_label">
+                <label>電話番号</label>
+                <span class="form_required">*</span>
+              </p>
+              <input type="number" class="form_input" required name="phone" placeholder="00-0000-0000" />
+              <div class="form_error">
+                必須項目です入力してください
+              </div>
+            </div>
+            <div class="form_item">
+              <p class="form_label isMsg">
+                <label>ご要望等(メッセージ)</label>
+                <span class="form_required">*</span>
+              </p>
+              <textarea class="form_textarea" required name="content" placeholder="メッセージをご入力ください"></textarea>
+            </div>
+            <button type="submit" class="form_btn">確認画面へ</button>
+          </form>
+        </div>
+    </main>
+  </div>
+<footer class="footer">
+  <div class="footer_menu">
+    <ul class="footer_list">
+      <li class="footer_list--item en"><a href="">TOP</a></li>
+      <li class="footer_list--item ja"><a href="">事業内容</a></li>
+      <li class="footer_list--item ja"><a href="">企業情報</a></li>
+      <li class="footer_list--item ja"><a href="">お問い合わせ</a></li>
+      <li class="footer_list--item ja"><a href="privacypolicy.html">個人情報保護方針</a></li>
+    </ul>
+  </div>
+  <p class="copyRight en">&copy;2023 TRS Inc. All Rights Reserved.</p>
+</footer>
+</body>
+<script defer>
+  window.addEventListener("load",function() {
+    $("#js-btnMenu").on("click" , function() {
+      $("#js-btnMenu").toggleClass("active");
+      $(".gnav").addClass("show");
+      $(".gnav").animate({ width: "toggle" }, 200);
+    });
+
+    $("#js-btnMenu").on("click" , function (e) {
+      if (!$(e.target).closest($(".gnav")).length && !$(e.target).closest($("#js-btnMenu")).length) {
+        if ($(".gnav").hasClass("show")) {
+          $(".gnav").removeClass("show")
+          $("#js-btnMenu").toggleClass("active");
+          $(".gnav").animate({ width: "toggle" }, 200);
+        }
+      }
+    });
+
+    //キービジュアルタイトル
+    $(".kv_ttl").addClass("fadeIn-title");
+
+    // お問い合わせ切り替えし
+    let companyBtn = document.getElementById("js-companyBtn");
+    let privateBtn = document.getElementById("js-privateBtn");
+    let company_content = document.getElementById("js-companyForm");
+    let private_content = document.getElementById("js-privateForm");
+
+    reset_styles = function() {
+      companyBtn.classList.remove("active");
+      privateBtn.classList.remove("active");
+      company_content.classList.remove("active");
+      private_content.classList.remove("active");
+    };
+
+    companyBtn.addEventListener("click", function() {
+      reset_styles();
+      if (this.classList.toggle("active")) {
+        company_content.classList.toggle("active");
+      }
+    });
+
+    privateBtn.addEventListener("click", function() {
+      reset_styles();
+      if (this.classList.toggle("active")) {
+        private_content.classList.toggle("active");
+      }
+    });
+
+    // デフォルトで未完了のみ表示
+    private_content.classList.toggle("active");
+    privateBtn.classList.toggle("active");
+  },
+  false
+  );
+</script>
+</html>
