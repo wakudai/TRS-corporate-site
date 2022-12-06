@@ -1,3 +1,4 @@
+@charset "utf-8";
 /* 共通 */
 .en {
   font-family: baskerville-urw;
@@ -6,6 +7,9 @@
 .ja {
   font-family: serif;
   font-weight: bold;
+}
+.wrapper {
+  background-color: #2c2c2c;
 }
 
 @media only screen and (min-width: 1025px){
@@ -16,7 +20,7 @@
   /* header */
   .header {
     height: 100vh;
-    background-color: #2c2c2c;
+    background-color: #fff;
     justify-content: space-between;
     position: fixed;
     z-index: 9999;
@@ -29,12 +33,9 @@
     display: flex;
     align-items: center;
   }
-  .header_logo img {
-    filter: drop-shadow(5px 5px 10px #fff);
-  }
   .gnav_list {
     margin: 30% 0 20% 0;
-    color: #C4C7CC;
+    color: #000;
     font-size: 16px;
     text-align: center;
   }
@@ -49,7 +50,7 @@
   }
   .pc-copyRight {
     font-size: 10px;
-    color: #C4C7CC;
+    color: #000;
     text-align: center;
     padding: 0 10px;
   }
@@ -57,20 +58,20 @@
   /* main */
   main {
     width: 100%;
-    padding-left: 10%;
+    padding-left: 15%;
   }
 
   /* kv */
   .kv {
     height: 460px;
-    background-image: url(/images/scott-graham-OQMZwNd3ThU-unsplash.jpg);
+    background-image: url(/images/img_contact.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
   }
   .kv_clear--box {
-    background-color: #fff;
+    background-color: #000;
     height: 460px;
     opacity: 0.5;
   }
@@ -100,6 +101,7 @@
     font-size: 56px;
     z-index: 100;
     opacity: 0;
+    color: #fff;
   }
   .kv_ttl::before {
     content: "Contact";
@@ -108,7 +110,7 @@
     top: -150%;
     left: -10%;
     z-index: -1000;
-    color: #000;
+    color: #fff;
     opacity: 0.1;
     font-family: Myanmar MN;
     font-weight: bold;
@@ -124,24 +126,10 @@
   .contact_ttl {
     position: relative;
     display: inline-block;
-    padding: 0 55px;
     margin: 0 auto;
     font-size: 48px;
-  }
-  .contact_ttl:before, .contact_ttl:after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    display: inline-block;
-    width: 45px;
-    height: 5px;
-    background-color: black;
-  }
-  .contact_ttl:before {
-    left:0;
-  }
-  .contact_ttl:after {
-    right: 0;
+    color: #fff;
+    border-bottom: solid 2px #fff;
   }
 
   /* 切り替えボタン */
@@ -150,7 +138,7 @@
   }
   #js-companyBtn.active, #js-privateBtn.active{
     color: #fff;
-    background-color: #141B20;
+    background-color: #555;
   }
   #js-companyForm.active, #js-privateForm.active {
     display: block;
@@ -160,20 +148,23 @@
     text-align: center;
     margin: 0 auto;
   }
-  .contact_private {
-    width: 20%;
-    margin-right: 5%;
+  .contact_private, .contact_company {
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    margin: 0 30px;
     padding: 10px 20px;
+    border: 2px solid #fff;
+    color: #444;
+    transition: 0.5s;
     font-size: 16px;
-    border-radius: 20px;
-  }
-  .contact_company {
     width: 20%;
-    margin-left: 5%;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 20px;
   }
+  .contact_private:hover, .contact_company:hover  {
+    color: #fff;
+    background: #888;
+  }
+
 
   /* form */
   .contact_private--form {
@@ -197,7 +188,7 @@
   .form_label {
     padding: 2%;
     width: 95%;
-    color: #000;
+    color: #fff;
     font-weight: 700;
   }
   .form_required {
@@ -219,6 +210,10 @@
     width: 20%;
     height: 50px;
   }
+  .age {
+    color: #fff;
+    margin-left: 16px;
+  }
   .form_error {
     display: none;
     margin-top: 5px;
@@ -236,51 +231,22 @@
     margin-top: 2%;
     padding: 2%;
   }
+
   .form_btn {
-    display: inline-block;
-    width: 50%;
+    display: block;
     text-align: center;
     text-decoration: none;
-    line-height: 40px;
-    outline: none;
-    position: relative;
-    z-index: 2;
-    background-color: #fff;
-    border-radius: 100px;
-    color: #333;
-    overflow: hidden;
-    font-size: 13px;
-    left: 25%;
-  }
-  .form_btn,
-  .form_btn::after {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-transition: all .3s;
-    transition: all .3s;
-  }
-  .form_btn::after {
-    position: absolute;
-    z-index: -1;
-    display: block;
-    content: '';
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    -webkit-transform: scale(.5);
-    transform: scale(.5);
-    border-radius: 100px;
+    margin: auto;
+    padding: 10px 20px;
+    border: 2px solid #444;
+    color: #444;
+    transition: 0.5s;
     font-size: 16px;
+    width: 20%;
   }
   .form_btn:hover {
     color: #fff;
-  }
-  .form_btn:hover::after {
     background: #444;
-    -webkit-transform: scale(1);
-    transform: scale(1);
   }
 
   /* footer */
@@ -293,7 +259,7 @@
   /* header */
   .header {
     height: 90px;
-    background-color: #2c2c2c;
+    background-color: #fff;
     display: flex;
     align-items: center;
     position: fixed;
@@ -305,9 +271,6 @@
     padding: 10px;
     display: flex;
     align-items: center;
-  }
-  .header_logo img {
-    filter: drop-shadow(2px 2px 4px #fff);
   }
   .pc-copyRight {
     display: none;
@@ -363,7 +326,7 @@
     height: 3px;
     transition: all 0.4s;
     border-radius: 4px;
-    background-color: #fff;
+    background-color: #2c2c2c;
   }
   .btn_menu--line::before,
   .btn_menu--line::after {
@@ -374,7 +337,7 @@
     height: 100%;
     transition: inherit;
     border-radius: 4px;
-    background-color: #fff;
+    background-color: #2c2c2c;
   }
   .btn_menu--line::before {
     top:-10px;
@@ -400,14 +363,14 @@
   /* kv */
   .kv {
     height: 460px;
-    background-image: url(/images/scott-graham-OQMZwNd3ThU-unsplash.jpg);
+    background-image: url(/images/img_contact.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
   }
   .kv_clear--box {
-    background-color: #fff;
+    background-color: #000;
     height: 460px;
     opacity: 0.5;
   }
@@ -437,6 +400,7 @@
     font-size: 40px;
     z-index: 10;
     opacity: 0;
+    color: #fff;
   }
   .kv_ttl::before {
     content: "Contact";
@@ -449,6 +413,7 @@
     opacity: 0.1;
     font-family: Myanmar MN;
     font-weight: bold;
+    color: #fff;
   }
   /* お問い合わせフォーム */
   .contact_wrapper {
@@ -458,26 +423,11 @@
     text-align: center;
   }
   .contact_ttl {
-    position: relative;
     display: inline-block;
-    padding: 0 55px;
     margin: 0 auto;
     font-size: 24px;
-  }
-  .contact_ttl:before, .contact_ttl:after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    display: inline-block;
-    width: 45px;
-    height: 5px;
-    background-color: black;
-  }
-  .contact_ttl:before {
-    left:0;
-  }
-  .contact_ttl:after {
-    right: 0;
+    color: #fff;
+    border-bottom: solid 2px #fff;
   }
 
   /* 切り替えボタン */
@@ -486,7 +436,7 @@
   }
   #js-companyBtn.active, #js-privateBtn.active{
     color: #fff;
-    background-color: #141B20;
+    background-color: #555;
   }
   #js-companyForm.active, #js-privateForm.active {
     display: block;
@@ -496,29 +446,31 @@
     text-align: center;
     margin: 0 auto;
   }
-  .contact_private {
-    width: 40%;
-    margin-right: 5%;
+  .contact_private, .contact_company {
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    margin: 0 30px;
     padding: 10px 20px;
-    font-size: 13px;
-    border-radius: 20px;
+    border: 2px solid #fff;
+    color: #444;
+    transition: 0.5s;
+    font-size: 16px;
+    width: 40%;
   }
-  .contact_company {
-    width: 40%;
-    margin-left: 5%;
-    padding: 10px 20px;
-    font-size: 13px;
-    border-radius: 20px;
+  .contact_private:hover, .contact_company:hover  {
+    color: #fff;
+    background: #888;
   }
 
   /* form */
   .contact_private--form {
-    margin: 5% auto;
+    margin: 0 auto;
     padding: 20px;
     width: 80%;
   }
   .contact_company--form {
-    margin: 5% auto;
+    margin: 0 auto;
     padding: 20px;
     width: 80%;
   }
@@ -533,7 +485,7 @@
   .form_label {
     padding: 2%;
     width: 95%;
-    color: #000;
+    color: #fff;
     font-weight: 700;
   }
   .form_required {
@@ -555,6 +507,10 @@
     width: 20%;
     height: 50px;
   }
+  .age {
+    color: #fff;
+    margin-left: 16px;
+  }
   .form_error {
     display: none;
     margin-top: 5px;
@@ -573,50 +529,20 @@
     padding: 2%;
   }
   .form_btn {
-    display: inline-block;
-    width: 50%;
+    display: block;
     text-align: center;
     text-decoration: none;
-    line-height: 40px;
-    outline: none;
-    position: relative;
-    z-index: 2;
-    background-color: #fff;
-    border-radius: 100px;
-    color: #333;
-    overflow: hidden;
-    font-size: 13px;
-    left: 25%;
-  }
-  .form_btn,
-  .form_btn::after {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-transition: all .3s;
-    transition: all .3s;
-  }
-  .form_btn::after {
-    position: absolute;
-    z-index: -1;
-    display: block;
-    content: '';
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    -webkit-transform: scale(.5);
-    transform: scale(.5);
-    border-radius: 100px;
+    margin: auto;
+    padding: 10px 20px;
+    border: 2px solid #444;
+    color: #444;
+    transition: 0.5s;
     font-size: 16px;
+    width: 50%;
   }
   .form_btn:hover {
     color: #fff;
-  }
-  .form_btn:hover::after {
     background: #444;
-    -webkit-transform: scale(1);
-    transform: scale(1);
   }
 
   /* footer */
@@ -624,14 +550,14 @@
     text-align: center;
     font-size: 13px;
     font-weight: 700;
-    background-color: #2c2c2c;
+    background-color: #fff;
     padding: 32px 0;
   }
   .footer_menu {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #C4C7CC;
+    color: #000;
     margin-bottom: 24px;
   }
   .footer_list {
@@ -642,7 +568,7 @@
     margin-left: 80px;
   }
   .copyRight {
-    color: #C4C7CC;
+    color: #000;
     font-size: 10px;
   }
 }
@@ -651,7 +577,7 @@
   /* header */
   .header {
     height: 65px;
-    background-color: #2c2c2c;
+    background-color: #fff;
     display: flex;
     align-items: center;
     position: fixed;
@@ -663,9 +589,6 @@
     padding: 10px;
     display: flex;
     align-items: center;
-  }
-  .header_logo img {
-    filter: drop-shadow(2px 1px 2px #fff);
   }
   .pc-copyRight {
     display: none;
@@ -719,7 +642,7 @@
     height: 2px;
     transition: all 0.4s;
     border-radius: 4px;
-    background-color: #fff;
+    background-color: #2c2c2c;
   }
   .btn_menu--line::before,
   .btn_menu--line::after {
@@ -730,7 +653,7 @@
     height: 100%;
     transition: inherit;
     border-radius: 4px;
-    background-color: #fff;
+    background-color: #2c2c2c;
   }
   .btn_menu--line::before {
     top:-10px;
@@ -756,14 +679,14 @@
   /* kv */
   .kv {
     height: 460px;
-    background-image: url(/images/scott-graham-OQMZwNd3ThU-unsplash.jpg);
+    background-image: url(/images/img_contact.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
   }
   .kv_clear--box {
-    background-color: #fff;
+    background-color: #000;
     height: 460px;
     opacity: 0.5;
   }
@@ -793,6 +716,7 @@
     font-size: 24px;
     z-index: 100;
     opacity: 0;
+    color: #fff;
   }
   .kv_ttl::before {
     content: "Contact";
@@ -805,6 +729,7 @@
     opacity: 0.1;
     font-family: Myanmar MN;
     font-weight: bold;
+    color: #fff;
   }
   /* お問い合わせフォーム */
   .contact_wrapper {
@@ -814,26 +739,11 @@
     text-align: center;
   }
   .contact_ttl {
-    position: relative;
     display: inline-block;
-    padding: 0 55px;
     margin: 0 auto;
     font-size: 22px;
-  }
-  .contact_ttl:before, .contact_ttl:after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    display: inline-block;
-    width: 45px;
-    height: 5px;
-    background-color: black;
-  }
-  .contact_ttl:before {
-    left:0;
-  }
-  .contact_ttl:after {
-    right: 0;
+    color: #fff;
+    border-bottom: solid 2px #fff;
   }
 
   /* 切り替えボタン */
@@ -842,7 +752,7 @@
   }
   #js-companyBtn.active, #js-privateBtn.active{
     color: #fff;
-    background-color: #141B20;
+    background-color: #444;
   }
   #js-companyForm.active, #js-privateForm.active {
     display: block;
@@ -852,25 +762,31 @@
     text-align: center;
     margin: 0 auto;
   }
-  .contact_private {
-    width: 30%;
+  .contact_private, .contact_company {
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    margin: 0 15px;
     padding: 10px 5px;
+    border: 2px solid #fff;
+    color: #444;
+    transition: 0.5s;
     font-size: 10px;
-    border-radius: 20px;
+    width: 30%;
   }
-  .contact_company {
-    width: 30%;
-    padding: 10px 5px;
-    font-size: 10px;
-    border-radius: 20px;
+  .contact_private:hover, .contact_company:hover  {
+    color: #fff;
+    background: #888;
   }
 
   /* form */
   .contact_private--form {
-    margin: 24px auto;
+    margin: 0 auto;
+    padding: 20px 10px;
   }
   .contact_company--form {
-    margin: 24px auto;
+    margin: 0 auto;
+    padding: 20px 10px;
   }
   .form {
     width: 80%;
@@ -883,7 +799,7 @@
   .form_label {
     padding: 2%;
     width: 95%;
-    color: #000;
+    color: #fff;
     font-weight: 700;
   }
   .form_required {
@@ -905,6 +821,10 @@
     width: 40%;
     height: 40px;
   }
+  .age {
+    margin-left: 16px;
+    color: #fff;
+  }
   .form_error {
     display: none;
     margin-top: 5px;
@@ -923,66 +843,35 @@
     padding: 2%;
   }
   .form_btn {
-    display: inline-block;
-    width: 50%;
+    display: block;
     text-align: center;
     text-decoration: none;
-    line-height: 40px;
-    outline: none;
-    position: relative;
-    z-index: 2;
-    background-color: #fff;
-    border-radius: 100px;
-    color: #333;
-    overflow: hidden;
-    font-size: 13px;
-    left: 25%;
-  }
-  .form_btn,
-  .form_btn::after {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-transition: all .3s;
-    transition: all .3s;
-  }
-  .form_btn::after {
-    position: absolute;
-    z-index: -1;
-    display: block;
-    content: '';
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    -webkit-transform: scale(.5);
-    transform: scale(.5);
-    border-radius: 100px;
-    font-size: 16px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    border: 2px solid #444;
+    color: #444;
+    transition: 0.5s;
+    font-size: 10px;
+    width: 50%;
   }
   .form_btn:hover {
     color: #fff;
-  }
-  .form_btn:hover::after {
     background: #444;
-    -webkit-transform: scale(1);
-    transform: scale(1);
   }
 
   /* footer */
   .footer {
     text-align: center;
-    color: #000;
     font-size: 13px;
     font-weight: 700;
-    background-color: #2c2c2c;
+    background-color: #fff;
     padding: 16px 0;
   }
   .footer_list {
     display: none;
   }
   .copyRight {
-    color: #C4C7CC;
+    color: #000;
     font-size: 10px;
   }
 

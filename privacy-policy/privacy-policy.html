@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>株式会社TRS | 個人情報保護方針</title>
+  <meta name="description" content="個人情報保護方針" />
+  <!-- 外部ファイルの読み込み -->
+  <link rel="stylesheet" href="./css/app.css" />
+  <link rel="stylesheet" href="https://use.typekit.net/rmg0sgc.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+  <!-- アイコン -->
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+  <!-- クローラーの制御の設定 -->
+  <meta name="robots" content="noindex , nofollow" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header_logo">
+        <img src="../images/logo.png" alt="株式会社TRSの会社ロゴ">
+      </div>
+      <div class="header_nav">
+        <nav class="gnav">
+          <ul class="gnav_list">
+            <li class="gnav_list--item"><a href="" class="gnav-link en">TOP</a></li>
+            <li class="gnav_list--item"><a href="" class="gnav-link ja">事業内容</a></li>
+            <li class="gnav_list--item"><a href="" class="gnav-link ja">企業情報</a></li>
+            <li class="gnav_list--item"><a href="contact.html" class="gnav-link ja">お問い合わせ</a></li>
+            <li class="gnav_list--item"><a href="privacy-policy.html" class="gnav-link ja">個人情報保護方針</a></li>
+          </ul>
+        </nav>
+        <button type="button" class="btn_menu" id="js-btnMenu">
+          <span class="btn_menu--line"></span>
+        </button>
+      </div>
+      <p class="pc-copyRight en">&copy;2023 TRS Inc. All Rights Reserved.</p>
+    </header>
+    <main>
+      <div class="kv">
+        <div class="kv_clear--box"></div>
+        <p class="kv_ttl ja">個人情報保護方針</p>
+      </div>
+      <div class="privacy_wrapper">
+        <div class="privacy_ttlArea">
+          <h1 class="privacy_ttl ja">個人情報保護方針</h1>
+        </div>
+      </div>
+    </main>
+  </div>
+  <footer class="footer">
+    <div class="footer_menu">
+      <ul class="footer_list">
+        <li class="footer_list--item en"><a href="">TOP</a></li>
+        <li class="footer_list--item ja"><a href="">事業内容</a></li>
+        <li class="footer_list--item ja"><a href="">企業情報</a></li>
+        <li class="footer_list--item ja"><a href="contact.html">お問い合わせ</a></li>
+        <li class="footer_list--item ja"><a href="privacy-policy.html">個人情報保護方針</a></li>
+      </ul>
+    </div>
+    <p class="copyRight en">&copy;2023 TRS Inc. All Rights Reserved.</p>
+  </footer>
+</body>
+<script defer>
+  window.addEventListener("load", function () {
+    $("#js-btnMenu").on("click", function () {
+      $("#js-btnMenu").toggleClass("active");
+      $(".gnav").addClass("show");
+      $(".gnav").animate({ width: "toggle" }, 200);
+    });
+
+    $("#js-btnMenu").on("click", function (e) {
+      if (!$(e.target).closest($(".gnav")).length && !$(e.target).closest($("#js-btnMenu")).length) {
+        if ($(".gnav").hasClass("show")) {
+          $(".gnav").removeClass("show")
+          $("#js-btnMenu").toggleClass("active");
+          $(".gnav").animate({ width: "toggle" }, 200);
+        }
+      }
+    });
+
+    //キービジュアルタイトル
+    $(".kv_ttl").addClass("fadeIn-title");
+
+    // お問い合わせ切り替えし
+    let companyBtn = document.getElementById("js-companyBtn");
+    let privateBtn = document.getElementById("js-privateBtn");
+    let company_content = document.getElementById("js-companyForm");
+    let private_content = document.getElementById("js-privateForm");
+
+    reset_styles = function () {
+      companyBtn.classList.remove("active");
+      privateBtn.classList.remove("active");
+      company_content.classList.remove("active");
+      private_content.classList.remove("active");
+    };
+
+    companyBtn.addEventListener("click", function () {
+      reset_styles();
+      if (this.classList.toggle("active")) {
+        company_content.classList.toggle("active");
+      }
+    });
+
+    privateBtn.addEventListener("click", function () {
+      reset_styles();
+      if (this.classList.toggle("active")) {
+        private_content.classList.toggle("active");
+      }
+    });
+
+    // デフォルトで未完了のみ表示
+    private_content.classList.toggle("active");
+    privateBtn.classList.toggle("active");
+  },
+    false
+  );
+</script>
+
+</html>
