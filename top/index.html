@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>株式会社TRS</title>
+    <meta name="description" content="TOPページ" />
+    <!-- 外部ファイルの読み込み -->
+    <link rel="stylesheet" href="./css/app.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/rmg0sgc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <!-- アイコン -->
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <!-- クローラーの制御の設定 -->
+    <meta name="robots" content="noindex , nofollow" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <h1 class="header_logo">
+                <img src="../images/logo.png" alt="株式会社TRSの会社ロゴ">
+            </h1>
+            <div class="header_nav">
+                <nav class="gnav">
+                    <ul class="gnav_list">
+                        <li class="gnav_list--item"><a href="/top/index.html" class="gnav-link en">TOP</a></li>
+                        <li class="gnav_list--item"><a href="" class="gnav-link ja">事業内容</a></li>
+                        <li class="gnav_list--item"><a href="" class="gnav-link ja">企業情報</a></li>
+                        <li class="gnav_list--item"><a href="/contact/contact.html" class="gnav-link ja">お問い合わせ</a></li>
+                        <li class="gnav_list--item"><a href="privacy-policy.html" class="gnav-link ja">個人情報保護方針</a></li>
+                    </ul>
+                </nav>
+                <button type="button" class="btn_menu" id="js-btnMenu">
+                    <span class="btn_menu--line"></span>
+                </button>
+            </div>
+            <p class="pc-copyRight en">&copy;2023 TRS Inc. All Rights Reserved.</p>
+        </header>
+        <main>
+            <div class="kv_wrap">
+                <div class="kv_clear--box">
+                    <p class="kv_ttl" id="js-kv_first">Trust</p>
+                    <p class="kv_ttl" id="js-kv_second">Responsibility</p>
+                    <p class="kv_ttl" id="js-kv_third">Service</p>
+                </div>
+            </div>
+            <div class="about_wrap">
+                <div class="about_bg--color">
+                    <div class="about_cont">
+                        <div class="about_text--box">
+                            <h2 class="about_ttl en">About</h2>
+                            <p class="about_text ja">我々、TRSは不動産から繋がる様々な「未来」を作り出すべく、専門家として皆様のお悩みやご要望に対し、常に全力でお応えしていきます。
+                            </p>
+                            <p class="about_text--imp ja">弊社の企業理念として<br />
+                                <strong class="en">Trust<span class="ja">信頼</span></strong><br />
+                                <strong class="en">Responsibility<span class="ja">責任</span></strong><br />
+                                <strong class="en">Service<span class="ja">奉仕</span></strong><br />
+                                ー責任ある行動で皆様の信頼に全力で奉仕し続けるー
+                            </p>
+                            <p class="about_text ja">
+                                を掲げさせて頂き、社員一同で皆様のライフスタイルや将来のビジョンを明確にし、その思い描く「未来」を実現するべく「今」からサポートさせて頂きます。今後も更なる事業の拡大と専門性を連携し、より多くの方へサポート出来るよう日々精進して参ります。
+                            </p>
+                            <p class="president_name ja">代表取締役 山下大貴</p>
+                        </div>
+                        <div class="about_img">
+                            <img src="/images/img_about.jpg" alt="TRSについて">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact_wrap">
+                <div class="contact_bg--color">
+                    <div class="contact_cont">
+                        <h2 class="contact_ttl en">Contact</h2>
+                        <div class="contact_btnArea">
+                            <a href="/contact/contact.html#contact" class="button ja">一般の方はこちら</a>
+                            <a href="/contact/contact.html#contact" class="button ja">法人の方はこちら</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer class="footer">
+        <div class="footer_menu">
+            <ul class="footer_list">
+                <li class="footer_list--item en"><a href="/top/index.html">TOP</a></li>
+                <li class="footer_list--item ja"><a href="">事業内容</a></li>
+                <li class="footer_list--item ja"><a href="">企業情報</a></li>
+                <li class="footer_list--item ja"><a href="/contact/contact.html">お問い合わせ</a></li>
+                <li class="footer_list--item ja"><a href="privacy-policy.html">個人情報保護方針</a></li>
+            </ul>
+        </div>
+        <p class="copyRight en">&copy;2023 TRS Inc. All Rights Reserved.</p>
+    </footer>
+</body>
+<script defer>
+    window.addEventListener("load", function () {
+        $("#js-btnMenu").on("click", function () {
+            $("#js-btnMenu").toggleClass("active");
+            $(".gnav").addClass("show");
+            $(".gnav").animate({ width: "toggle" }, 200);
+        });
+
+        $("#js-btnMenu").on("click", function (e) {
+            if (!$(e.target).closest($(".gnav")).length && !$(e.target).closest($("#js-btnMenu")).length) {
+                if ($(".gnav").hasClass("show")) {
+                    $(".gnav").removeClass("show")
+                    $("#js-btnMenu").toggleClass("active");
+                    $(".gnav").animate({ width: "toggle" }, 200);
+                }
+            }
+        });
+
+        //キービジュアルタイトル
+        $("#js-kv_first").addClass("fadeIn-title");
+        $("#js-kv_second").addClass("fadeIn-title-second");
+        $("#js-kv_third").addClass("fadeIn-title-third");
+    }, false);
+</script>
+
+</html>
