@@ -1,0 +1,828 @@
+/* 共通 */
+
+/*display: noneを当てる*/
+.en {
+  font-family: baskerville-urw;
+  font-weight: bold;
+}
+.ja {
+  font-family: serif;
+  font-weight: bold;
+}
+ul {
+  list-style: none;
+}
+ a {
+  color: #2c2c2c;
+  text-decoration: none;
+ }
+
+@media only screen and (min-width: 1025px){
+  .wrapper {
+    display: flex;
+    width: 100%;
+  }
+  /* header */
+  .header {
+    width: 210px;
+    height: 100vh;
+    background-color: #fff;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 9999;
+    width: 15%;
+    margin: 0;
+    padding: 0;
+  }
+  .header_logo {
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+  }
+  .header_logo img {
+    text-align: center;
+    width: 90%;
+    filter: drop-shadow(5px 5px 10px #fff);
+  }
+  .gnav_list {
+    margin: 20% 20% 20% 0;
+    color: #000;
+    font-size: 16px;
+    text-align: center;
+  }
+  .gnav_list--item {
+    margin-top: 50px;
+  }
+  .gnav_list--item:last-of-type {
+    display: none;
+  }
+  .btn_menu {
+    display: none;
+  }
+  .pc-copyRight {
+    font-size: 10px;
+    color: #2c2c2c;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  /* main */
+  main {
+    width: 100%;
+    padding-left: 15%;
+    background-color: #000;
+  }
+
+  /* kv */
+  .kv {
+    height: 460px;
+    background-image: url(./../../images/img-kv.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  .kv_clear--box {
+    background-color: #000;
+    height: 460px;
+    opacity: 0.5;
+  }
+
+  /* fadeIn-title animation (左から右)*/
+  .fadeIn-title {
+    animation-name: fadeIn-titleAnime;
+    animation-duration: 3s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes fadeIn-titleAnime {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .kv_ttl {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    font-size: 56px;
+    z-index: 100;
+    opacity: 0;
+    color: #fff;
+  }
+  .kv_ttl::before {
+    content: "Company";
+    font-size: 70px;
+    position: absolute;
+    top: -40%;
+    left: 1%;
+    z-index: -1000;
+    color: #fff;
+    opacity: 0.1;
+    font-family: Myanmar MN;
+    font-weight: bold;
+  }
+
+  .overview_wrapper {
+    padding: 80px;
+  }
+  .overview_ttlArea {
+    text-align: center;
+    padding-bottom: 100px;
+  }
+  .overview_clear--box {
+    border-bottom: 4px solid #ccc;
+    width: 26%;
+    margin: 0 auto;
+  }
+  .map_clear--box {
+    border-bottom: 4px solid #ccc;
+    width: 26%;
+    margin: 0 auto;
+  }
+  .overview_ttl {
+    position: relative;
+    display: inline-block;
+    padding: 0 55px;
+    margin: 0 auto;
+    font-size: 48px;
+    color: #fff;
+  }
+  .overview_ttl:after {
+    right: 0;
+  }
+  .overview_list {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #2c2c2c;
+  }
+  .overview_list th,
+  .overview_list td {
+    padding: 20px;
+    border-bottom: 1px solid #2c2c2c;
+  }
+  .overview_list th {
+    font-weight: bold;
+    background-color: #808080;
+    border-right: 1px solid #2c2c2c;
+    color: #fff;
+  }
+  .overview_list td {
+    text-align: center;
+    background-color: #fff;
+    color: #292929;
+    font-weight: bold;
+  }
+  .map {
+    width: 100%;
+  }
+  .overview_map {
+    max-width: none;
+    padding: 40px;
+    margin: 0 auto;
+  }
+  .map_wrapper {
+    padding: 80px;
+  }
+  .map_ttlArea {
+    text-align: center;
+    padding-bottom: 100px;
+  }
+  .map_clear--box {
+    border-bottom: 4px solid #ccc;
+    width: 26%;
+    margin: 0 auto;
+  }
+  .map_clear--box {
+    border-bottom: 4px solid #ccc;
+    width: 26%;
+    margin: 0 auto;
+  }
+  .map_ttl {
+    position: relative;
+    display: inline-block;
+    padding: 0 55px;
+    margin: 0 auto;
+    font-size: 48px;
+    color: #fff;
+  }
+  /* footer */
+  .footer {
+    display: none;
+  }
+}
+
+@media screen and (min-width:768px) and ( max-width:1024px) {
+  /* header */
+  .header {
+    height: 100px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 9999;
+  }
+  .header_logo {
+    width: 24%;
+    height: 90px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+  }
+  .header_logo img {
+    text-align: center;
+    width: 80%;
+    filter: drop-shadow(2px 2px 4px #fff);
+  }
+  .pc-copyRight {
+    display: none;
+  }
+
+  /* ハンバーガーメニュー */
+  .gnav {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: #2c2c2c;
+  }
+  .gnav_list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    row-gap: 25px;
+    color: #2c2c2c;
+  }
+  .gnav-link {
+    color: #fff;
+  }
+  .gnav_list--item:last-of-type {
+    display: none;
+  }
+  .btn_menu {
+    display: flex;
+    position: fixed;
+    top: 10px;
+    right: 0;
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    height: 100px;
+    text-align: center;
+    align-items: center;
+    padding: 8px 16px;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    appearance: none;
+  }
+  .btn_menu--line {
+    display: block;
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    transition: all 0.4s;
+    border-radius: 4px;
+    background-color: #2c2c2c;
+  }
+  .btn_menu--line::before,
+  .btn_menu--line::after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: inherit;
+    border-radius: 4px;
+    background-color: #2c2c2c;
+  }
+  .btn_menu--line::before {
+    top:-10px;
+  }
+  .btn_menu--line::after {
+    top: 10px;
+  }
+  .btn_menu.active .btn_menu--line {
+    background-color: transparent;
+  }
+  .btn_menu.active .btn_menu--line::before,
+  .btn_menu.active .btn_menu--line::after {
+    top: 0;
+    background-color: #fff;
+  }
+  .btn_menu.active .btn_menu--line::before {
+    transform: rotate(45deg);
+  }
+  .btn_menu.active .btn_menu--line::after {
+    transform: rotate(-45deg);
+  }
+
+  main {
+    background-color: #000;
+  }
+  /* kv */
+  .kv {
+    height: 520px;
+    background-image: url(./../../images/img-kv.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  .kv_clear--box {
+    background-color: #000;
+    height: 520px;
+    opacity: 0.5;
+  }
+
+  /* fadeIn-title animation (左から右)*/
+  .fadeIn-title {
+    animation-name: fadeIn-titleAnime;
+    animation-duration: 3s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes fadeIn-titleAnime {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .kv_ttl {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    font-size: 40px;
+    z-index: 10;
+    opacity: 0;
+    color: #fff;
+  }
+  .kv_ttl::before {
+    content: "Company";
+    font-size: 120px;
+    position: absolute;
+    top: -140%;
+    left: -10%;
+    z-index: -1000;
+    color: #fff;
+    opacity: 0.1;
+    font-family: Myanmar MN;
+    font-weight: bold;
+  }
+  .kv_ttl {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    font-size: 56px;
+    z-index: 100;
+    opacity: 0;
+    color: #fff;
+  }
+  .kv_ttl::before {
+    content: "Company";
+    font-size: 70px;
+    position: absolute;
+    top: -40%;
+    left: 1%;
+    z-index: -1000;
+    color: #fff;
+    opacity: 0.1;
+    font-family: Myanmar MN;
+    font-weight: bold;
+  }
+
+  .overview_wrapper {
+    padding: 80px;
+  }
+  .overview_ttlArea {
+    text-align: center;
+    padding-bottom: 100px;
+  }
+  .overview_clear--box {
+    border-bottom: 4px solid #ccc;
+    width: 26%;
+    margin: 0 auto;
+  }
+  .map_clear--box {
+    border-bottom: 4px solid #ccc;
+    width: 26%;
+    margin: 0 auto;
+  }
+  .overview_ttl {
+    position: relative;
+    display: inline-block;
+    padding: 0 55px;
+    margin: 0 auto;
+    font-size: 48px;
+    color: #fff;
+  }
+  .overview_ttl:before {
+    left:0;
+  }
+  #js-companyForm, #js-privateForm{
+    display: none;
+  }
+  #js-companyBtn.active, #js-privateBtn.active{
+    color: #fff;
+    background-color: #555;
+  }
+  #js-companyForm.active, #js-privateForm.active {
+    display: block;
+  }
+  .overview_ttl:after {
+    right: 0;
+  }
+  .overview_list {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #2c2c2c;
+  }
+  .overview_list th,
+  .overview_list td {
+    padding: 20px;
+    border-bottom: 1px solid #2c2c2c;
+  }
+  .overview_list th {
+    font-weight: bold;
+    background-color: #808080;
+    border-right: 1px solid #2c2c2c;
+    color: #fff;
+  }
+  .overview_list td {
+    text-align: center;
+    background-color: #fff;
+    color: #292929;
+    font-weight: bold;
+  }
+  .map {
+    width: 100%;
+  }
+  .overview_map {
+    max-width: none;
+    padding: 40px;
+    margin: 0 auto;
+  }
+  .map_wrapper {
+    padding: 80px;
+  }
+  .map_ttlArea {
+    text-align: center;
+    padding-bottom: 100px;
+  }
+  .map_clear--box {
+    border-bottom: 4px solid #ccc;
+    width: 26%;
+    margin: 0 auto;
+  }
+  .map_clear--box {
+    border-bottom: 4px solid #ccc;
+    width: 26%;
+    margin: 0 auto;
+  }
+  .map_ttl {
+    position: relative;
+    display: inline-block;
+    padding: 0 55px;
+    margin: 0 auto;
+    font-size: 48px;
+    color: #fff;
+  }
+  /* footer */
+  .footer {
+    text-align: center;
+    font-size: 13px;
+    font-weight: 700;
+    background-color: #fff;
+    padding: 32px 0;
+  }
+  .footer_menu {
+    display: none;
+  }
+  .copyRight {
+    color: #2c2c2c;
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 767px){
+    /* header */
+    .header {
+      height: 120px;
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      position: fixed;
+      z-index: 9999;
+    }
+    .header_logo {
+      width: 15%;
+      height: 90px;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+    }
+    .header_logo img {
+      text-align: center;
+      width: 80%;
+      filter: drop-shadow(2px 2px 4px #fff);
+    }
+    .pc-copyRight {
+      display: none;
+    }
+  
+    /* ハンバーガーメニュー */
+    .gnav {
+      display: none;
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      background-color: #2c2c2c;
+    }
+    .gnav_list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      row-gap: 25px;
+      color: #2c2c2c;
+    }
+    .gnav_list--item:last-of-type {
+      display: none;
+    }
+    .btn_menu {
+      display: flex;
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 100;
+      align-items: center;
+      justify-content: center;
+      width: 70px;
+      height: 90px;
+      text-align: center;
+      padding: 8px 16px;
+      border: none;
+      outline: none;
+      background: none;
+      cursor: pointer;
+      appearance: none;
+    }
+    .btn_menu--line {
+      display: block;
+      position: relative;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      transition: all 0.4s;
+      border-radius: 4px;
+      background-color: #2c2c2c;
+    }
+    .btn_menu--line::before,
+    .btn_menu--line::after {
+      display: block;
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transition: inherit;
+      border-radius: 4px;
+      background-color: #2c2c2c;
+    }
+    .btn_menu--line::before {
+      top:-10px;
+    }
+    .btn_menu--line::after {
+      top: 10px;
+    }
+    .btn_menu.active .btn_menu--line {
+      background-color: transparent;
+    }
+    .btn_menu.active .btn_menu--line::before,
+    .btn_menu.active .btn_menu--line::after {
+      top: 0;
+      background-color: #fff;
+    }
+    .btn_menu.active .btn_menu--line::before {
+      transform: rotate(45deg);
+    }
+    .btn_menu.active .btn_menu--line::after {
+      transform: rotate(-45deg);
+    }
+  
+    main {
+      background-color: #000;
+    }
+    /* kv */
+    .kv {
+      height: 520px;
+      background-image: url(./../../images/img-kv.jpg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+    .kv_clear--box {
+      background-color: #000;
+      height: 520px;
+      opacity: 0.5;
+    }
+  
+    /* fadeIn-title animation (左から右)*/
+    .fadeIn-title {
+      animation-name: fadeIn-titleAnime;
+      animation-duration: 3s;
+      animation-delay: 0.5s;
+      animation-fill-mode: forwards;
+    }
+    @keyframes fadeIn-titleAnime {
+      0% {
+        opacity: 0;
+        transform: translateX(-100px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  
+    .kv_ttl {
+      position: absolute;
+      top: 50%;
+      left: 20%;
+      font-size: 40px;
+      z-index: 10;
+      opacity: 0;
+      color: #fff;
+    }
+    .kv_ttl::before {
+      content: "Company";
+      font-size: 120px;
+      position: absolute;
+      top: -140%;
+      left: -10%;
+      z-index: -1000;
+      color: #fff;
+      opacity: 0.1;
+      font-family: Myanmar MN;
+      font-weight: bold;
+    }
+    .kv_ttl {
+      position: absolute;
+      top: 50%;
+      left: 20%;
+      font-size: 56px;
+      z-index: 100;
+      opacity: 0;
+      color: #fff;
+    }
+    .kv_ttl::before {
+      content: "Company";
+      font-size: 70px;
+      position: absolute;
+      top: -40%;
+      left: 1%;
+      z-index: -1000;
+      color: #fff;
+      opacity: 0.1;
+      font-family: Myanmar MN;
+      font-weight: bold;
+    }
+  
+    .overview_wrapper {
+      padding: 80px;
+    }
+    .overview_ttlArea {
+      text-align: center;
+      padding-bottom: 100px;
+    }
+    .overview_clear--box {
+      border-bottom: 4px solid #ccc;
+      width: 26%;
+      margin: 0 auto;
+    }
+    .map_clear--box {
+      border-bottom: 4px solid #ccc;
+      width: 26%;
+      margin: 0 auto;
+    }
+    .overview_ttl {
+      position: relative;
+      display: inline-block;
+      padding: 0 55px;
+      margin: 0 auto;
+      font-size: 48px;
+      color: #fff;
+    }
+    .overview_ttl:before {
+      left:0;
+    }
+    #js-companyForm, #js-privateForm{
+      display: none;
+    }
+    #js-companyBtn.active, #js-privateBtn.active{
+      color: #fff;
+      background-color: #555;
+    }
+    #js-companyForm.active, #js-privateForm.active {
+      display: block;
+    }
+    .overview_ttl:after {
+      right: 0;
+    }
+    .overview_list {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid #2c2c2c;
+    }
+    .overview_list th,
+    .overview_list td {
+      padding: 20px;
+      border-bottom: 1px solid #2c2c2c;
+    }
+    .overview_list th {
+      font-weight: bold;
+      background-color: #808080;
+      border-right: 1px solid #2c2c2c;
+      color: #fff;
+    }
+    .overview_list td {
+      text-align: center;
+      background-color: #fff;
+      color: #292929;
+      font-weight: bold;
+    }
+    .map {
+      width: 100%;
+    }
+    .overview_map {
+      max-width: none;
+      padding: 40px;
+      margin: 0 auto;
+    }
+    .map_wrapper {
+      padding: 80px;
+    }
+    .map_ttlArea {
+      text-align: center;
+      padding-bottom: 100px;
+    }
+    .map_clear--box {
+      border-bottom: 4px solid #ccc;
+      width: 26%;
+      margin: 0 auto;
+    }
+    .map_clear--box {
+      border-bottom: 4px solid #ccc;
+      width: 26%;
+      margin: 0 auto;
+    }
+    .map_ttl {
+      position: relative;
+      display: inline-block;
+      padding: 0 55px;
+      margin: 0 auto;
+      font-size: 48px;
+      color: #fff;
+    }
+    /* footer */
+    .footer {
+      text-align: center;
+      font-size: 13px;
+      font-weight: 700;
+      background-color: #fff;
+      padding: 32px 0;
+    }
+    .footer_menu {
+      display: none;
+    }
+    .copyRight {
+      color: #2c2c2c;
+      font-size: 16px;
+    }
+  }

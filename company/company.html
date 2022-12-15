@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>株式会社TRS | 会社概要</title>
+    <meta name="description" content="会社概要" />
+    <!-- 外部ファイルの読み込み -->
+    <script src="【ファイルのURL】"></script>
+    <link rel="stylesheet" href="./css/app.css" />
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/rmg0sgc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <!-- アイコン -->
+    <link rel="icon" type="image/png" sizes="16x16" href="./../images/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <!-- クローラーの制御の設定 -->
+    <meta name="robots" content="noindex , nofollow" />
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header_logo">
+        <img src="../images/logo.png" alt="株式会社TRSの会社ロゴ">
+      </div>
+      <div class="header_nav">
+        <nav class="gnav">
+          <ul class="gnav_list">
+            <li class="gnav_list--item"><a href="" class="gnav-link en">TOP</a></li>
+            <li class="gnav_list--item"><a href="" class="gnav-link ja">事業内容</a></li>
+            <li class="gnav_list--item"><a href="" class="gnav-link ja">企業情報</a></li>
+            <li class="gnav_list--item"><a href="contact.html" class="gnav-link ja">お問い合わせ</a></li>
+            <li class="gnav_list--item"><a href="" class="gnav-link ja">個人情報保護方針</a></li>
+          </ul>
+        </nav>
+        <button type="button" class="btn_menu" id="js-btnMenu">
+          <span class="btn_menu--line"></span>
+        </button>
+      </div>
+      <p class="pc-copyRight en">&copy;2023 TRS Inc. All Rights Reserved.</p>
+    </header>
+    <main>
+      <div class="kv">
+        <div class="kv_clear--box"></div>
+        <p class="kv_ttl ja">企業情報</p>
+      </div>
+      <div class="overview_wrapper">
+        <div class="overview_ttlArea">
+          <h1 class="overview_ttl ja">会社概要</h1>
+          <div class="overview_clear--box"></div>
+        </div>
+        <table class="overview_list">
+          <tr>
+            <th>会社名</th>
+            <td>株式会社TRS</td>
+          </tr>
+          <tr>
+            <th>代表者名</th>
+            <td>代表取締役　山下 大貴</td>
+          </tr>
+          <tr>
+            <th>会社所在地</th>
+            <td>東京都港区江南2丁目3-1号<br>大信秋山ビル3階</td>
+          </tr>
+          <tr>
+            <th>代表電話</th>
+            <td>03-5776-3771</td>
+          </tr>
+          <tr>
+            <th>創業</th>
+            <td>2019年10月1日</td>
+          </tr>
+          <tr>
+            <th>資本金</th>
+            <td>5,000,000円</td>
+          </tr>
+          <tr>
+            <th>事業内容</th>
+            <td>不動産コンサルティング事業<br>収益用不動産事業<br>賃貸管理事業<br>リフォーム事業</td>
+          </tr>
+        </table>
+      </div>
+      <div class="overview_map">
+        <div class="map-wrapper">
+          <div class="map_ttlArea">
+            <h1 class="map_ttl ja">MAP</h1>
+            <div class="map_clear--box"></div>
+          </div>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.9386666923683!2d139.7429798!3d35.6292385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188a453a574ba9%3A0x68ced4323b8f7ffc!2z44CSMTA4LTAwNzUg5p2x5Lqs6YO95riv5Yy65riv5Y2X77yS5LiB55uu77yT4oiS77yRIOWkp-S_oeeni-WxseODk-ODqyAz6ZqO!5e0!3m2!1sja!2sjp!4v1670379810155!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+      </div>
+    </main>
+  </div>
+<footer class="footer">
+  <div class="footer_menu">
+    <ul class="footer_list">
+      <li class="footer_list--item en"><a href="">TOP</a></li>
+      <li class="footer_list--item ja"><a href="">事業内容</a></li>
+      <li class="footer_list--item ja"><a href="">企業情報</a></li>
+      <li class="footer_list--item ja"><a href="">お問い合わせ</a></li>
+      <li class="footer_list--item ja"><a href="privacypolicy.html">個人情報保護方針</a></li>
+    </ul>
+  </div>
+  <p class="copyRight en">&copy;2023 TRS Inc. All Rights Reserved.</p>
+</footer>
+</body>
+<script defer>
+  window.addEventListener("load",function() {
+    $("#js-btnMenu").on("click" , function() {
+      $("#js-btnMenu").toggleClass("active");
+      $(".gnav").addClass("show");
+      $(".gnav").animate({ width: "toggle" }, 200);
+    });
+
+    $("#js-btnMenu").on("click" , function (e) {
+      if (!$(e.target).closest($(".gnav")).length && !$(e.target).closest($("#js-btnMenu")).length) {
+        if ($(".gnav").hasClass("show")) {
+          $(".gnav").removeClass("show")
+          $("#js-btnMenu").toggleClass("active");
+          $(".gnav").animate({ width: "toggle" }, 200);
+        }
+      }
+    });
+
+    //キービジュアルタイトル
+    $(".kv_ttl").addClass("fadeIn-title");
+
+    // デフォルトで未完了のみ表示
+    private_content.classList.toggle("active");
+    privateBtn.classList.toggle("active");
+  },
+  false
+  );
+</script>
+</html>
