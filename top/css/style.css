@@ -1,0 +1,905 @@
+@charset "utf-8";
+/* 共通 */
+.en {
+  font-family: baskerville-urw;
+  font-weight: bold;
+}
+.ja {
+  font-family: serif;
+  font-weight: bold;
+}
+.wrapper {
+  background-color: #2c2c2c;
+}
+.button {
+  display: inline-block;
+  width: 200px;
+  height: 54px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 54px;
+  outline: none;
+}
+.button::before,
+.button::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: '';
+}
+.button,
+.button::before,
+.button::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+@media only screen and (min-width: 1025px){
+  .wrapper {
+    display: flex;
+    width: 100%;
+  }
+  /* header */
+  .header {
+    height: 100vh;
+    background-color: #fff;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 9999;
+    width: 15%;
+  }
+  .header_logo {
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+  }
+  .gnav_list {
+    margin: 30% 0 20% 0;
+    color: #000;
+    font-size: 16px;
+    text-align: center;
+  }
+  .gnav_list--item {
+    margin-top: 80px;
+  }
+  .gnav_list--item:last-of-type {
+    display: none;
+  }
+  .btn_menu {
+    display: none;
+  }
+  .pc-copyRight {
+    font-size: 10px;
+    color: #000;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  /* main */
+  main {
+    width: 100vw;
+    padding-left: 15%;
+  }
+
+  /* kv */
+  .kv_wrap {
+    position: relative;
+    background-image: url(/images/img-kv.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+  }
+  .kv_clear--box {
+    background-color: #fff;
+    height: 100vh;
+    opacity: 0.5;
+  }
+
+  /* fadeIn-title animation (左から右)*/
+  .fadeIn-title {
+    animation-name: fadeIn-titleAnime;
+    animation-duration: 3s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes fadeIn-titleAnime {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .fadeIn-title-second {
+    animation-name: fadeIn-titleAnime;
+    animation-duration: 3s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes fadeIn-titleAnime {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .fadeIn-title-third {
+    animation-name: fadeIn-titleAnime;
+    animation-duration: 3s;
+    animation-delay: 2.5s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes fadeIn-titleAnime {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .kv_ttl {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    font-size: 54px;
+    font-family: Adobe Handwriting;
+    opacity: 0;
+  }
+  .kv_ttl:nth-child(2) {
+    top: 60%;
+    left: 25%;
+  }
+  .kv_ttl:last-child {
+    top: 73%;
+    left: 45%;
+  }
+
+  /* about */
+  .about_wrap {
+    width: 100%;
+    background-image: url(/images/img_logo_silver.png);
+    background-position: 57% center;
+    background-size: 30%;
+    background-repeat: no-repeat;
+  }
+  .about_bg--color {
+    background: rgba(44,44,44,0.9);
+  }
+  .about_text--box {
+    padding: 40px;
+    width: 55%;
+    color: #fff;
+  }
+  .about_ttl {
+    font-size: 64px;
+    text-decoration: underline;
+    margin-bottom: 40px;
+  }
+  .about_text {
+    margin-bottom: 40px;
+    line-height: 1.8;
+    letter-spacing: 1.6px;
+  }
+  .about_text--imp {
+    line-height: 1.8;
+    margin-bottom: 40px;
+    letter-spacing: 1.6px;
+  }
+  .about_text--imp strong {
+    font-size: 30px;
+    line-height: 2.5;
+  }
+  .about_text--imp strong span {
+    margin-left: 20px;
+  }
+  .about_cont {
+    display: flex;
+  }
+  .president_name {
+    text-align: right;
+    letter-spacing: 1.6px;
+  }
+  .about_img {
+    width: 45%;
+  }
+  .about_img img {
+    height: 100%;
+  }
+
+  /* contact */
+  .contact_wrap {
+    width: 100%;
+    background-image: url(/images/img_contact.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .contact_bg--color {
+    background: rgba(44,44,44,0.7);
+  }
+  .contact_cont {
+    padding: 40px;
+  }
+  .contact_ttl {
+    font-size: 64px;
+    text-decoration: underline;
+    color: #fff;
+    margin-bottom: 40px;
+  }
+  .contact_btnArea {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .button {
+    position: relative;
+    z-index: 2;
+    border: 2px solid #fff;
+    color: #fff;
+    line-height: 50px;
+    overflow: hidden;
+    width: 45%;
+  }
+  .button:hover {
+    color: #000;
+  }
+  .button::after {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: scale(.5);
+    transform: scale(.5);
+  }
+  .button:hover::after {
+    background: #fff;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+
+  /* footer */
+  .footer {
+    display: none;
+  }
+}
+
+@media screen and (min-width:768px) and ( max-width:1024px) {
+  /* header */
+  .header {
+    height: 90px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 9999;
+  }
+  .header_logo {
+    width: 15%;
+    height: 90px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+  }
+  .pc-copyRight {
+    display: none;
+  }
+
+  /* ハンバーガーメニュー */
+  .gnav {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: #2c2c2c;
+  }
+  .gnav_list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    row-gap: 25px;
+    color: #C4C7CC;
+  }
+  .gnav_list--item:last-of-type {
+    display: none;
+  }
+  .btn_menu {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 90px;
+    text-align: center;
+    padding: 8px 16px;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    appearance: none;
+  }
+  .btn_menu--line {
+    display: block;
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    transition: all 0.4s;
+    border-radius: 4px;
+    background-color: #2c2c2c;
+  }
+  .btn_menu--line::before,
+  .btn_menu--line::after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: inherit;
+    border-radius: 4px;
+    background-color: #2c2c2c;
+  }
+  .btn_menu--line::before {
+    top:-10px;
+  }
+  .btn_menu--line::after {
+    top: 10px;
+  }
+  .btn_menu.active .btn_menu--line {
+    background-color: transparent;
+  }
+  .btn_menu.active .btn_menu--line::before,
+  .btn_menu.active .btn_menu--line::after {
+    top: 0;
+    background-color: #fff;
+  }
+  .btn_menu.active .btn_menu--line::before {
+    transform: rotate(45deg);
+  }
+  .btn_menu.active .btn_menu--line::after {
+    transform: rotate(-45deg);
+  }
+
+  /* kv */
+  .kv_wrap {
+    position: relative;
+    background-image: url(/images/img-kv.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+  }
+  .kv_clear--box {
+    background-color: #fff;
+    height: 100vh;
+    opacity: 0.5;
+  }
+
+  /* fadeIn-title animation (左から右)*/
+  .fadeIn-title {
+    animation-name: fadeIn-titleAnime;
+    animation-duration: 3s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes fadeIn-titleAnime {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .fadeIn-title-second {
+    animation-name: fadeIn-titleAnime;
+    animation-duration: 3s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes fadeIn-titleAnime {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .fadeIn-title-third {
+    animation-name: fadeIn-titleAnime;
+    animation-duration: 3s;
+    animation-delay: 2.5s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes fadeIn-titleAnime {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .kv_ttl {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    font-size: 54px;
+    font-family: Adobe Handwriting;
+    opacity: 0;
+  }
+  .kv_ttl:nth-child(2) {
+    top: 60%;
+    left: 25%;
+  }
+  .kv_ttl:last-child {
+    top: 73%;
+    left: 45%;
+  }
+
+  /* about */
+  .about_wrap {
+    width: 100%;
+    background-image: url(/images/img_logo_silver.png);
+    background-position: 50% center;
+    background-size: 30%;
+    background-repeat: no-repeat;
+  }
+  .about_bg--color {
+    background: rgba(44,44,44,0.9);
+  }
+  .about_text--box {
+    padding: 40px 120px;
+    color: #fff;
+    text-align: center;
+  }
+  .about_ttl {
+    font-size: 54px;
+    text-decoration: underline;
+    margin-bottom: 32px;
+  }
+  .about_text {
+    margin-bottom: 40px;
+    line-height: 1.8;
+    letter-spacing: 1.6px;
+    font-size: 13px;
+  }
+  .about_text--imp {
+    line-height: 1.8;
+    margin-bottom: 40px;
+    letter-spacing: 1.6px;
+    font-size: 13px;
+  }
+  .about_text--imp strong {
+    font-size: 25px;
+    line-height: 2.5;
+  }
+  .about_text--imp strong span {
+    margin-left: 20px;
+  }
+  .president_name {
+    text-align: right;
+    letter-spacing: 1.6px;
+  }
+  .about_img {
+    display: none;
+  }
+
+  /* contact */
+  .contact_wrap {
+    width: 100%;
+    background-image: url(/images/img_contact.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .contact_bg--color {
+    background: rgba(44,44,44,0.7);
+  }
+  .contact_cont {
+    padding: 40px 120px;
+  }
+  .contact_ttl {
+    font-size: 54px;
+    text-decoration: underline;
+    color: #fff;
+    margin-bottom: 32px;
+    text-align: center;
+  }
+  .contact_btnArea {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .button {
+    position: relative;
+    z-index: 2;
+    border: 2px solid #fff;
+    color: #fff;
+    line-height: 50px;
+    overflow: hidden;
+    width: 45%;
+    font-size: 13px;
+  }
+  .button:hover {
+    color: #000;
+  }
+  .button::after {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: scale(.5);
+    transform: scale(.5);
+  }
+  .button:hover::after {
+    background: #fff;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  /* footer */
+  .footer {
+    text-align: center;
+    font-size: 13px;
+    font-weight: 700;
+    background-color: #fff;
+    padding: 32px 0;
+  }
+  .footer_menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    margin-bottom: 24px;
+  }
+  .footer_list {
+    display: flex;
+    gap: 80px;
+  }
+  .footer_privacy {
+    margin-left: 80px;
+  }
+  .copyRight {
+    color: #000;
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 767px){
+  /* header */
+  .header {
+    height: 65px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 9999;
+  }
+  .header_logo {
+    width: 18%;
+    height: 65px;
+    padding: 2px 8px;
+    display: flex;
+    align-items: center;
+  }
+  .pc-copyRight {
+    display: none;
+  }
+
+  /* ハンバーガーメニュー */
+  .gnav {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: #2c2c2c;
+    box-shadow: -10px 0 35px -20px rgb(0 0 0 / 25%);
+  }
+  .gnav_list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    row-gap: 25px;
+    color: #C4C7CC;
+    font-size: 13px;
+  }
+  .btn_menu {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 65px;
+    text-align: center;
+    padding: 2px 8px;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    appearance: none;
+  }
+  .btn_menu--line {
+    display: block;
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transition: all 0.4s;
+    border-radius: 4px;
+    background-color: #2c2c2c;
+  }
+  .btn_menu--line::before,
+  .btn_menu--line::after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: inherit;
+    border-radius: 4px;
+    background-color: #2c2c2c;
+  }
+  .btn_menu--line::before {
+    top:-10px;
+  }
+  .btn_menu--line::after {
+    top: 10px;
+  }
+  .btn_menu.active .btn_menu--line {
+    background-color: transparent;
+  }
+  .btn_menu.active .btn_menu--line::before,
+  .btn_menu.active .btn_menu--line::after {
+    top: 0;
+    background-color: #fff;
+  }
+  .btn_menu.active .btn_menu--line::before {
+    transform: rotate(45deg);
+  }
+  .btn_menu.active .btn_menu--line::after {
+    transform: rotate(-45deg);
+  }
+
+  /* kv */
+  .kv_wrap {
+    position: relative;
+    background-image: url(/images/img-kv.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+  }
+  .kv_clear--box {
+    background-color: #fff;
+    height: 100vh;
+    opacity: 0.5;
+  }
+
+  /* fadeIn-title animation (左から右)*/
+  .fadeIn-title {
+    animation-name: fadeIn-titleAnime;
+    animation-duration: 3s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes fadeIn-titleAnime {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .fadeIn-title-second {
+    animation-name: fadeIn-titleAnime;
+    animation-duration: 3s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes fadeIn-titleAnime {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .fadeIn-title-third {
+    animation-name: fadeIn-titleAnime;
+    animation-duration: 3s;
+    animation-delay: 2.5s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes fadeIn-titleAnime {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .kv_ttl {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    font-size: 40px;
+    font-family: Adobe Handwriting;
+    opacity: 0;
+  }
+  .kv_ttl:nth-child(2) {
+    top: 60%;
+    left: 20%;
+  }
+  .kv_ttl:last-child {
+    top: 73%;
+    left: 55%;
+  }
+
+  /* about */
+  .about_wrap {
+    width: 100%;
+    background-image: url(/images/img_logo_silver.png);
+    background-position: 50% center;
+    background-size: 30%;
+    background-repeat: no-repeat;
+  }
+  .about_bg--color {
+    background: rgba(44,44,44,0.9);
+  }
+  .about_text--box {
+    padding: 24px 10px;
+    color: #fff;
+    text-align: center;
+  }
+  .about_ttl {
+    font-size: 25px;
+    text-decoration: underline;
+    margin-bottom: 24px;
+  }
+  .about_text {
+    margin-bottom: 24px;
+    line-height: 1.8;
+    letter-spacing: 1.6px;
+    font-size: 13px;
+  }
+  .about_text--imp {
+    line-height: 1.8;
+    margin-bottom: 24px;
+    letter-spacing: 1.6px;
+    font-size: 13px;
+  }
+  .about_text--imp strong {
+    font-size: 20px;
+    line-height: 2.5;
+  }
+  .about_text--imp strong span {
+    margin-left: 20px;
+  }
+  .president_name {
+    text-align: right;
+    letter-spacing: 1.6px;
+    font-size: 13px;
+  }
+  .about_img {
+    display: none;
+  }
+
+  /* contact */
+  .contact_wrap {
+    width: 100%;
+    background-image: url(/images/img_contact.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .contact_bg--color {
+    background: rgba(44,44,44,0.7);
+  }
+  .contact_cont {
+    padding: 40px 24px
+  }
+  .contact_ttl {
+    font-size:  25px;
+    text-decoration: underline;
+    color: #fff;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  .contact_btnArea {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .button {
+    position: relative;
+    z-index: 2;
+    border: 2px solid #fff;
+    color: #fff;
+    line-height: 50px;
+    overflow: hidden;
+    width: 40%;
+    font-size: 13px;
+  }
+  .button:hover {
+    color: #000;
+  }
+  .button::after {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: scale(.5);
+    transform: scale(.5);
+  }
+  .button:hover::after {
+    background: #fff;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  /* footer */
+  .footer {
+    text-align: center;
+    background-color: #fff;
+    padding: 16px 0;
+  }
+  .footer_list {
+    display: none;
+  }
+  .copyRight {
+    color: #000;
+    font-size: 10px;
+  }
+
+}
