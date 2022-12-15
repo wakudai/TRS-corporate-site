@@ -1,0 +1,12 @@
+/* style */
+@import '/contact/css/style.css';
+
+/* Reset css */
+@import '/css/foundation/_base.css';
+@import '/css/foundation/_font.css';
+@import '/css/foundation/_reset.css';
+@import '/css/foundation/_var.css';
+
+
+
+/* js */
