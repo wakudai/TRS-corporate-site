@@ -107,7 +107,7 @@
     content: "Contact";
     font-size: 160px;
     position: absolute;
-    top: -150%;
+    top: -100%;
     left: -10%;
     z-index: -1000;
     color: #fff;
@@ -720,10 +720,10 @@
   }
   .kv_ttl::before {
     content: "Contact";
-    font-size: 96px;
+    font-size: 74px;
     position: absolute;
-    top: -180%;
-    left: -55%;
+    top: -130%;
+    left: -30%;
     z-index: -1000;
     color: #000;
     opacity: 0.1;

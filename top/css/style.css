@@ -158,7 +158,8 @@
     top: 50%;
     left: 20%;
     font-size: 54px;
-    font-family: Adobe Handwriting;
+    font-family: snell Roundhand;
+    font-weight: bold;
     opacity: 0;
   }
   .kv_ttl:nth-child(2) {
