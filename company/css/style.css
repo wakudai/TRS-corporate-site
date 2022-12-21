@@ -24,12 +24,15 @@ ul {
   }
   /* header */
   .header {
+    width: 210px;
     height: 100vh;
     background-color: #fff;
     justify-content: space-between;
     position: fixed;
     z-index: 9999;
     width: 15%;
+    margin: 0;
+    padding: 0;
   }
   .header_logo {
     width: 100%;
