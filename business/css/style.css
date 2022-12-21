@@ -22,15 +22,12 @@
     }
     /* header */
     .header {
-      width: 210px;
       height: 100vh;
       background-color: #fff;
       justify-content: space-between;
       position: fixed;
       z-index: 9999;
       width: 15%;
-      margin: 0;
-      padding: 0;
     }
     .header_logo {
       width: 100%;
@@ -39,19 +36,14 @@
       display: flex;
       align-items: center;
     }
-    .header_logo img {
-      text-align: center;
-      width: 90%;
-      filter: drop-shadow(5px 5px 10px #fff);
-    }
     .gnav_list {
-      margin: 20% 20% 20% 0;
-      color: #292929;
+      margin: 30% 0 20% 0;
+      color: #000;
       font-size: 16px;
       text-align: center;
     }
     .gnav_list--item {
-      margin-top: 50px;
+      margin-top: 80px;
     }
     .gnav_list--item:last-of-type {
       display: none;
@@ -61,16 +53,15 @@
     }
     .pc-copyRight {
       font-size: 10px;
-      color: #2c2c2c;
+      color: #000;
       text-align: center;
       padding: 0 10px;
-      margin-top: 200px;
     }
   
     /* main */
     main {
       width: 100%;
-      padding-left: 16%;
+      padding-left: 15%;
     }
   
     /* kv */
@@ -117,10 +108,10 @@
     }
     .kv_ttl::before {
       content: "Business";
-      font-size: 70px;
+      font-size: 120px;
       position: absolute;
-      top: -40%;
-      left: 1%;
+      top: -80%;
+      left: -12%;
       z-index: -1000;
       color: #fff;
       opacity: 0.1;
@@ -129,15 +120,14 @@
     }
   
     .content_wrapper {
-      padding: 80px;
-      background-color: #000;
+      padding: 40px;
     }
     .content_ttlArea {
       text-align: center;
-      padding-bottom: 100px;
+      padding-bottom: 50px;
     }
     .content_clear--box {
-      border-bottom: 4px solid #ccc;
+      border-bottom: 2px solid #ccc;
       width: 26%;
       margin: 0 auto;
     }

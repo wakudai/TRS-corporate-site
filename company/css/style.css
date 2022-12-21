@@ -140,7 +140,7 @@ ul {
     margin: 0 auto;
     font-size: 48px;
     color: #fff;
-    border-bottom: 4px solid #ccc;
+    border-bottom: 2px solid #ccc;
   }
   .overview_ttl:after {
     right: 0;
@@ -189,7 +189,7 @@ ul {
     margin: 0 auto;
     font-size: 48px;
     color: #fff;
-    border-bottom: 4px solid #ccc;
+    border-bottom: 2px solid #ccc;
   }
   /* footer */
   .footer {
@@ -388,23 +388,13 @@ ul {
     text-align: center;
     padding-bottom: 60px;
   }
-  .overview_clear--box {
-    border-bottom: 4px solid #ccc;
-    width: 26%;
-    margin: 0 auto;
-  }
-  .map_clear--box {
-    border-bottom: 4px solid #ccc;
-    width: 26%;
-    margin: 0 auto;
-  }
   .overview_ttl {
     position: relative;
     display: inline-block;
     margin: 0 auto;
     font-size: 48px;
     color: #fff;
-    border-bottom: 4px solid #ccc;
+    border-bottom: 2px solid #ccc;
   }
   .overview_ttl:before {
     left:0;
@@ -460,23 +450,13 @@ ul {
     text-align: center;
     padding-bottom: 60px;
   }
-  .map_clear--box {
-    border-bottom: 4px solid #ccc;
-    width: 26%;
-    margin: 0 auto;
-  }
-  .map_clear--box {
-    border-bottom: 4px solid #ccc;
-    width: 26%;
-    margin: 0 auto;
-  }
   .map_ttl {
     position: relative;
     display: inline-block;
     margin: 0 auto;
     font-size: 48px;
     color: #fff;
-    border-bottom: 4px solid #ccc;
+    border-bottom: 2px solid #ccc;
   }
   /* footer */
   .footer {
