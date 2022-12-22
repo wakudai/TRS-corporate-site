@@ -237,6 +237,9 @@ ul {
     row-gap: 25px;
     color: #C4C7CC;
   }
+  .gnav_list--item:last-of-type {
+    display: none;
+  }
   .gnav-link {
     color: #fff;
   }
