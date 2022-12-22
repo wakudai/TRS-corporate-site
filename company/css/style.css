@@ -47,6 +47,9 @@ ul {
   .gnav_list--item {
     margin-top: 80px;
   }
+  .gnav_list--item:nth-child(1) {
+    margin-top: 0;
+  }
   .gnav_list--item:last-of-type {
     display: none;
   }
@@ -128,11 +131,6 @@ ul {
   .overview_ttlArea {
     text-align: center;
     padding-bottom: 50px;
-  }
-  .map_clear--box {
-    border-bottom: 4px solid #ccc;
-    width: 26%;
-    margin: 0 auto;
   }
   .overview_ttl {
     position: relative;

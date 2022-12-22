@@ -45,6 +45,9 @@
     .gnav_list--item {
       margin-top: 80px;
     }
+    .gnav_list--item:nth-child(1) {
+      margin-top: 0;
+    }
     .gnav_list--item:last-of-type {
       display: none;
     }
@@ -121,23 +124,19 @@
   
     .content_wrapper {
       padding: 40px;
+      background-color: #000;
     }
     .content_ttlArea {
       text-align: center;
       padding-bottom: 50px;
     }
-    .content_clear--box {
-      border-bottom: 2px solid #ccc;
-      width: 26%;
-      margin: 0 auto;
-    }
     .content_ttl {
       position: relative;
       display: inline-block;
-      padding: 0 55px;
       margin: 0 auto;
       font-size: 48px;
       color: #fff;
+      border-bottom: 2px solid #ccc;
     }
     .content_ttl:after {
       right: 0;
