@@ -67,7 +67,7 @@ ul {
   main {
     width: 100%;
     padding-left: 15%;
-    background-color: #000;
+    background-color: #2c2c2c;
   }
 
   /* kv */
@@ -126,11 +126,11 @@ ul {
   }
 
   .overview_wrapper {
-    padding: 40px;
+    padding: 80px 80px 40px;
   }
   .overview_ttlArea {
     text-align: center;
-    padding-bottom: 50px;
+    padding-bottom: 80px;
   }
   .overview_ttl {
     position: relative;
@@ -170,16 +170,16 @@ ul {
   }
   .overview_map {
     max-width: none;
-    padding: 40px;
+    padding: 40px 80px 80px;
     display: block;
     text-align: center;
   }
-  .map_wrapper {
+  /*.map_wrapper {
     padding: 40px;
-  }
+  }*/
   .map_ttlArea {
     text-align: center;
-    padding-bottom: 50px;
+    padding-bottom: 80px;
   }
   .map_ttl {
     position: relative;
@@ -301,7 +301,7 @@ ul {
   }
 
   main {
-    background-color: #000;
+    background-color: #2c2c2c;
   }
   /* kv */
   .kv {
