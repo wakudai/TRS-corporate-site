@@ -61,14 +61,25 @@
       </div>
       <!-- 一般のお問い合わせ -->
       <div id="js-privateForm" class="contact_private--form">
-        <form class="form" action="privateForm.php" method="post">
-          <input type="hidden" name="token" value="">
+        <form class="form"
+          action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdn9HItjTv58q1iQ9v0rJEu3a2wkVowU7_RBWyLsc5OjBlibw/formResponse"
+          method="post">
           <div class="form_item">
             <p class="form_label">
               <label>お名前</label>
               <span class="form_required">*</span>
             </p>
-            <input type="text" class="form_input" required name="name" placeholder="山田 太郎" />
+            <input type="text" class="form_input" required name="entry.515187945" placeholder="山田 太郎" />
+            <div class="form_error">
+              必須項目です入力してください
+            </div>
+          </div>
+          <div class="form_item">
+            <p class="form_label">
+              <label>フリガナ</label>
+              <span class="form_required">*</span>
+            </p>
+            <input type="text" class="form_input" required name="entry.785498607" placeholder="ヤマダ タロウ" />
             <div class="form_error">
               必須項目です入力してください
             </div>
@@ -78,7 +89,7 @@
               <label name="name_kana">年齢</label>
               <span class="form_required">*</span>
             </p>
-            <select name="num" class="form_pulldown">
+            <select name="entry.1101085136" class="form_pulldown">
               <option value="">-</option>
               <option value="18">18</option>
               <option value="19">19</option>
@@ -173,7 +184,17 @@
               <label>メールアドレス</label>
               <span class="form_required">*</span>
             </p>
-            <input type="email" class="form_input" required name="email" />
+            <input type="email" class="form_input" required name="entry.731558695" />
+            <div class="form_error">
+              必須項目です入力してください
+            </div>
+          </div>
+          <div class="form_item">
+            <p class="form_label">
+              <label>メールアドレス(確認用)</label>
+              <span class="form_required">*</span>
+            </p>
+            <input type="email" class="form_input" required name="entry.653646132" />
             <div class="form_error">
               必須項目です入力してください
             </div>
@@ -183,7 +204,7 @@
               <label>電話番号</label>
               <span class="form_required">*</span>
             </p>
-            <input type="number" class="form_input" required name="phone" placeholder="00-0000-0000" />
+            <input type="number" class="form_input" required name="entry.1872770848" placeholder="00-0000-0000" />
             <div class="form_error">
               必須項目です入力してください
             </div>
@@ -193,21 +214,23 @@
               <label>ご要望等(メッセージ)</label>
               <span class="form_required">*</span>
             </p>
-            <textarea class="form_textarea" required name="content" placeholder="メッセージをご入力ください"></textarea>
+            <textarea class="form_textarea" required name="entry.891850150" placeholder="メッセージをご入力ください"></textarea>
           </div>
-          <button type="submit" class="form_btn">確認画面へ</button>
+          <button type="submit" class="form_btn">送信</button>
         </form>
       </div>
       <!-- 企業のお問い合わせ -->
       <div id="js-companyForm" class="contact_company--form">
-        <form class="form" action="companyForm.php" method="post">
+        <form class="form"
+          action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSe03vuXh1JC00vK6NvoVDUBtBfAYS15z1-4WKfw18XisUdspw/formResponse"
+          method="post">
           <input type="hidden" name="token" value="">
           <div class="form_item">
             <p class="form_label">
               <label>企業名</label>
               <span class="form_required">*</span>
             </p>
-            <input type="text" class="form_input" required name="company_name" placeholder="株式会社TRS" />
+            <input type="text" class="form_input" required name="entry.515187945" placeholder="株式会社TRS" />
             <div class="form_error">
               必須項目です入力してください
             </div>
@@ -217,7 +240,17 @@
               <label>代表者名</label>
               <span class="form_required">*</span>
             </p>
-            <input type="text" class="form_input" required name="name" placeholder="山田 太郎" />
+            <input type="text" class="form_input" required name="entry.785498607" placeholder="山田 太郎" />
+            <div class="form_error">
+              必須項目です入力してください
+            </div>
+          </div>
+          <div class="form_item">
+            <p class="form_label">
+              <label>フリガナ</label>
+              <span class="form_required">*</span>
+            </p>
+            <input type="text" class="form_input" required name="entry.1204961365" placeholder="ヤマダ タロウ" />
             <div class="form_error">
               必須項目です入力してください
             </div>
@@ -227,7 +260,17 @@
               <label>メールアドレス</label>
               <span class="form_required">*</span>
             </p>
-            <input type="email" class="form_input" required name="email" />
+            <input type="email" class="form_input" required name="entry.731558695" />
+            <div class="form_error">
+              必須項目です入力してください
+            </div>
+          </div>
+          <div class="form_item">
+            <p class="form_label">
+              <label>メールアドレス(確認用)</label>
+              <span class="form_required">*</span>
+            </p>
+            <input type="email" class="form_input" required name="entry.653646132" />
             <div class="form_error">
               必須項目です入力してください
             </div>
@@ -237,7 +280,7 @@
               <label>電話番号</label>
               <span class="form_required">*</span>
             </p>
-            <input type="number" class="form_input" required name="phone" placeholder="00-0000-0000" />
+            <input type="number" class="form_input" required name="entry.1872770848" placeholder="00-0000-0000" />
             <div class="form_error">
               必須項目です入力してください
             </div>
@@ -247,9 +290,9 @@
               <label>ご要望等(メッセージ)</label>
               <span class="form_required">*</span>
             </p>
-            <textarea class="form_textarea" required name="content" placeholder="メッセージをご入力ください"></textarea>
+            <textarea class="form_textarea" required name="entry.891850150" placeholder="メッセージをご入力ください"></textarea>
           </div>
-          <button type="submit" class="form_btn">確認画面へ</button>
+          <button type="submit" class="form_btn">送信</button>
         </form>
       </div>
     </main>

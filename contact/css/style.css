@@ -34,13 +34,18 @@
     align-items: center;
   }
   .gnav_list {
-    margin: 30% 0 20% 0;
     color: #000;
     font-size: 16px;
     text-align: center;
   }
+  .gnav_list--item:first-child {
+    margin-top: 0px;
+  }
   .gnav_list--item {
     margin-top: 80px;
+  }
+  .gnav_list--item:nth-child(4) {
+    margin-bottom: 80px;
   }
   .gnav_list--item:last-of-type {
     display: none;
@@ -107,7 +112,7 @@
     content: "Contact";
     font-size: 160px;
     position: absolute;
-    top: -150%;
+    top: -100%;
     left: -10%;
     z-index: -1000;
     color: #fff;
@@ -479,7 +484,7 @@
     margin: 0 auto;
   }
   .form_item {
-    font-size: 13px;
+    font-size: 16px;
     padding: 20px 0;
   }
   .form_label {
@@ -720,10 +725,10 @@
   }
   .kv_ttl::before {
     content: "Contact";
-    font-size: 96px;
+    font-size: 74px;
     position: absolute;
-    top: -180%;
-    left: -55%;
+    top: -130%;
+    left: -30%;
     z-index: -1000;
     color: #000;
     opacity: 0.1;

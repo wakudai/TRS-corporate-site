@@ -37,6 +37,10 @@
   transition: all .3s;
 }
 
+.kv_ttl {
+  font-family: snell Roundhand;
+}
+
 @media only screen and (min-width: 1025px){
   .wrapper {
     display: flex;
@@ -59,13 +63,18 @@
     align-items: center;
   }
   .gnav_list {
-    margin: 30% 0 20% 0;
     color: #000;
     font-size: 16px;
     text-align: center;
   }
+  .gnav_list--item:first-child {
+    margin-top: 0px;
+  }
   .gnav_list--item {
     margin-top: 80px;
+  }
+  .gnav_list--item:nth-child(4) {
+    margin-bottom: 80px;
   }
   .gnav_list--item:last-of-type {
     display: none;
@@ -158,7 +167,7 @@
     top: 50%;
     left: 20%;
     font-size: 54px;
-    font-family: Adobe Handwriting;
+    font-weight: bold;
     opacity: 0;
   }
   .kv_ttl:nth-child(2) {
@@ -182,7 +191,7 @@
     background: rgba(44,44,44,0.9);
   }
   .about_text--box {
-    padding: 40px;
+    padding: 80px 40px;
     width: 55%;
     color: #fff;
   }
@@ -195,6 +204,7 @@
     margin-bottom: 40px;
     line-height: 1.8;
     letter-spacing: 1.6px;
+    font-size: 16px;
   }
   .about_text--imp {
     line-height: 1.8;
@@ -203,7 +213,8 @@
   }
   .about_text--imp strong {
     font-size: 30px;
-    line-height: 2.5;
+    margin-bottom: 40px;
+    display: block;
   }
   .about_text--imp strong span {
     margin-left: 20px;
@@ -234,7 +245,7 @@
     background: rgba(44,44,44,0.7);
   }
   .contact_cont {
-    padding: 40px;
+    padding: 80px 40px;
   }
   .contact_ttl {
     font-size: 64px;
@@ -255,6 +266,7 @@
     line-height: 50px;
     overflow: hidden;
     width: 45%;
+    font-size: 16px;
   }
   .button:hover {
     color: #000;
@@ -457,7 +469,6 @@
     top: 50%;
     left: 20%;
     font-size: 54px;
-    font-family: Adobe Handwriting;
     opacity: 0;
   }
   .kv_ttl:nth-child(2) {
@@ -481,7 +492,7 @@
     background: rgba(44,44,44,0.9);
   }
   .about_text--box {
-    padding: 40px 120px;
+    padding: 40px 80px;
     color: #fff;
     text-align: center;
   }
@@ -494,17 +505,12 @@
     margin-bottom: 40px;
     line-height: 1.8;
     letter-spacing: 1.6px;
-    font-size: 13px;
-  }
-  .about_text--imp {
-    line-height: 1.8;
-    margin-bottom: 40px;
-    letter-spacing: 1.6px;
-    font-size: 13px;
+    font-size: 16px;
   }
   .about_text--imp strong {
+    display: block;
     font-size: 25px;
-    line-height: 2.5;
+    margin-bottom: 40px;
   }
   .about_text--imp strong span {
     margin-left: 20px;
@@ -529,7 +535,7 @@
     background: rgba(44,44,44,0.7);
   }
   .contact_cont {
-    padding: 40px 120px;
+    padding: 40px 80px;
   }
   .contact_ttl {
     font-size: 54px;
@@ -551,7 +557,7 @@
     line-height: 50px;
     overflow: hidden;
     width: 45%;
-    font-size: 13px;
+    font-size: 16px;
   }
   .button:hover {
     color: #000;
@@ -774,7 +780,6 @@
     top: 50%;
     left: 15%;
     font-size: 40px;
-    font-family: Adobe Handwriting;
     opacity: 0;
   }
   .kv_ttl:nth-child(2) {
