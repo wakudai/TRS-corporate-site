@@ -360,27 +360,6 @@ ul {
     font-family: Myanmar MN;
     font-weight: bold;
   }
-  .kv_ttl {
-    position: absolute;
-    top: 50%;
-    left: 20%;
-    font-size: 40px;
-    z-index: 100;
-    opacity: 0;
-    color: #fff;
-  }
-  .kv_ttl::before {
-    content: "Company";
-    font-size: 120px;
-    position: absolute;
-    top: -140%;
-    left: 10%;
-    z-index: -1000;
-    color: #fff;
-    opacity: 0.1;
-    font-family: Myanmar MN;
-    font-weight: bold;
-  }
 
   .overview_wrapper {
     padding: 40px;

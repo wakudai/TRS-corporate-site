@@ -123,8 +123,8 @@
     }
   
     .content_wrapper {
-      padding: 40px;
-      background-color: #000;
+      padding: 80px;
+      background-color: #2c2c2c;
     }
     .content_ttlArea {
       text-align: center;
@@ -200,7 +200,7 @@
     }
     .content_rent--item {
       margin-top: 3%;
-      margin-right: 8%;
+      margin-right: 10%;
       color: #fff;
     }
     .content_rent--title {
@@ -269,7 +269,7 @@
     }
     .content_reform--item {
       margin-top: 2%;
-      margin-right: 6%;
+      margin-right: 10%;
       color: #fff;
     }
     .content_reform--title {
@@ -299,12 +299,9 @@
   }
   
   @media screen and (min-width:768px) and ( max-width:1024px) {
-    a {
-      color: #fff;
-    }
     /* header */
     .header {
-      height: 100px;
+      height: 90px;
       background-color: #fff;
       display: flex;
       align-items: center;
@@ -312,16 +309,11 @@
       z-index: 9999;
     }
     .header_logo {
-      width: 24%;
+      width: 15%;
       height: 90px;
       padding: 10px;
       display: flex;
       align-items: center;
-    }
-    .header_logo img {
-      text-align: center;
-      width: 80%;
-      filter: drop-shadow(2px 2px 4px #fff);
     }
     .pc-copyRight {
       display: none;
@@ -346,18 +338,21 @@
       width: 100%;
       height: 100%;
       row-gap: 25px;
-      color: #2c2c2c;
+      color: #C4C7CC;
+    }
+    .gnav_list--item:last-of-type {
+      display: none;
     }
     .btn_menu {
       display: flex;
       position: fixed;
-      top: 10px;
+      top: 0;
       right: 0;
       z-index: 100;
       align-items: center;
       justify-content: center;
-      width: 90px;
-      height: 100px;
+      width: 70px;
+      height: 90px;
       text-align: center;
       align-items: center;
       padding: 8px 16px;
@@ -455,7 +450,7 @@
       color: #fff;
     }
     .kv_ttl::before {
-      content: "Company";
+      content: "Business";
       font-size: 120px;
       position: absolute;
       top: -140%;
@@ -468,12 +463,12 @@
     }
   
     .content_wrapper {
-      padding: 80px;
-      background-color: #000;
+      padding: 40px;
+      background-color: #2c2c2c;
     }
     .content_ttlArea {
       text-align: center;
-      padding-bottom: 100px;
+      padding-bottom: 60px;
     }
     .content_clear--box {
       border-bottom: 4px solid #ccc;
@@ -483,10 +478,9 @@
     .content_ttl {
       position: relative;
       display: inline-block;
-      padding: 0 55px;
       margin: 0 auto;
       font-size: 48px;
-      color: #fff;
+      color: #fff;border-bottom: 2px solid #ccc;
     }
     .content_ttl:after {
       right: 0;
@@ -498,7 +492,7 @@
       margin-top: -20px;
     }
     .content_investment--inner {
-      height: 21%;
+      height: 430px;
       display: flex;
       justify-content: space-between;
       background-color: #808080;
@@ -541,7 +535,7 @@
     }
 
     .content_rent--inner {
-      height: 450px;
+      height: 430px;
       display: flex;
       justify-content: space-between;
       background-color: #2c2c2c;
@@ -576,7 +570,7 @@
     }
 
     .content_sale--inner {
-      height: 450px;
+      height: 430px;
       display: flex;
       justify-content: space-between;
       background-color: #808080;
@@ -613,7 +607,7 @@
     }
 
     .content_reform--inner {
-      height: 450px;
+      height: 430px;
       display: flex;
       justify-content: space-between;
       color: #fff;
@@ -623,7 +617,7 @@
     }
     .content_reform--item {
       margin-top: 2%;
-      margin-right: 15%;
+      margin-right: 16%;
       margin-bottom: 5%;
     }
     .content_reform--title {
@@ -645,10 +639,20 @@
     }
     /* footer */
     .footer {
+      text-align: center;
+      font-size: 13px;
+      font-weight: 700;
+      background-color: #fff;
+      padding: 32px 0;
+    }
+    .footer_menu {
       display: none;
     }
+    .footer_privacy {
+      margin-left: 80px;
+    }
     .copyRight {
-      color: #C4C7CC;
+      color: #000;
       font-size: 10px;
     }
   }
@@ -656,7 +660,7 @@
 @media screen and (max-width:767px){
       /* header */
       .header {
-        height: 100px;
+        height: 65px;
         background-color: #fff;
         display: flex;
         align-items: center;
@@ -664,17 +668,12 @@
         z-index: 9999;
       }
       .header_logo {
-        width: 24%;
-        height: 90px;
+        width: 18%;
+        height: 65px;
         padding: 10px;
         display: flex;
         align-items: center;
         margin-left: 4%;
-      }
-      .header_logo img {
-        text-align: center;
-        width: 80%;
-        filter: drop-shadow(2px 2px 4px #fff);
       }
       .pc-copyRight {
         display: none;
@@ -690,6 +689,7 @@
         width: 100%;
         height: 100%;
         background-color: #2c2c2c;
+        box-shadow: -10px 0 35px -20px rgb(0 0 0 / 25%);
       }
       .gnav_list {
         display: flex;
@@ -699,7 +699,7 @@
         width: 100%;
         height: 100%;
         row-gap: 25px;
-        color: #2c2c2c;
+        color: #C4C7CC;
       }
       .gnav_list--item:last-of-type {
         display: none;
@@ -707,16 +707,16 @@
       .btn_menu {
         display: flex;
         position: fixed;
-        top: 10px;
+        top: 0;
         right: 0;
         z-index: 100;
         align-items: center;
         justify-content: center;
-        width: 90px;
-        height: 100px;
+        width: 45px;
+        height: 65px;
         text-align: center;
         align-items: center;
-        padding: 8px 16px;
+        padding: 2px 8px;
         border: none;
         outline: none;
         background: none;
@@ -728,7 +728,7 @@
         position: relative;
         left: 0;
         width: 100%;
-        height: 3px;
+        height: 2px;
         transition: all 0.4s;
         border-radius: 4px;
         background-color: #2c2c2c;
@@ -766,11 +766,11 @@
       }
     
       main {
-        background-color: #000;
+        background-color: #2c2c2c;
       }
       /* kv */
       .kv {
-        height: 430px;
+        height: 460px;
         background-image: url(./../../images/andrew-neel-cckf4TsHAuw-unsplash.jpeg);
         background-position: center;
         background-size: cover;
@@ -779,7 +779,7 @@
       }
       .kv_clear--box {
         background-color: #000;
-        height: 430px;
+        height: 60px;
         opacity: 0.5;
       }
     
@@ -805,17 +805,17 @@
         position: absolute;
         top: 50%;
         left: 20%;
-        font-size: 40px;
+        font-size: 24px;
         z-index: 10;
         opacity: 0;
         color: #fff;
       }
       .kv_ttl::before {
         content: "Business";
-        font-size: 120px;
+        font-size: 74px;
         position: absolute;
-        top: -140%;
-        left: -10%;
+        top: -130%;
+        left: -76%;
         z-index: -1000;
         color: #fff;
         opacity: 0.1;
@@ -824,21 +824,21 @@
       }
     
       .content_wrapper {
-        padding: 80px;
+        padding: 24px;
         background-color: #2c2c2c;
-        height: 100vh;
+        height: 56vh;
       }
       .content_ttlArea {
         text-align: center;
-        padding-bottom: 50px;
+        padding-bottom: 25px;
       }
       .content_ttl {
         position: relative;
         display: inline-block;
         margin: 0 auto;
-        font-size: 25px;
+        font-size: 22px;
         color: #fff;
-        border-bottom: 4px solid #ccc;
+        border-bottom: 2px solid #ccc;
       }
       .content_ttl:before {
         left:0;
@@ -865,11 +865,12 @@
       .content_investment--item {
         color: #fff;
         margin-left: 6%;
-        height: 400px;
+        margin-bottom: 5%;
+        height: 420px;
         letter-spacing: 2px;
       }
       .content_investment--title {
-        padding-top: 6%;
+        padding-top: 3%;
         font-size: 15px;
       }
       .content_investment--title span {
@@ -892,10 +893,11 @@
       }
       .content_investment--img {
         width: 100%;
+        height: 52%;
       }
 
       .content_rent--inner {
-        height: 116vh;
+        height: 100vh;
         display: flex;
         flex-direction: column-reverse;
         background-color: #2c2c2c;
@@ -904,12 +906,12 @@
       .content_rent--item {
         color: #fff;
         margin-left: 6%;
-        height: 340px;
+        height: 420px;
         line-height: 2;
         letter-spacing: 1px;
       }
       .content_rent--title {
-        padding-top: 4%;
+        padding-top: 7%;
         margin-bottom: 6%;
         font-size: 15px;
         letter-spacing: 2px;
@@ -927,6 +929,7 @@
       }
       .content_rent--img {
         width: 100%;
+        height: 50%;
       }
       .content_sale--inner {
         height: 100vh;
@@ -937,7 +940,7 @@
       .content_sale--item {
         color: #fff;
         margin-left: 6%;
-        height: 450px;
+        height: 400px;
         letter-spacing: 2px;
       }
       .content_sale--title {
@@ -959,23 +962,26 @@
       }
       .content_sale--img {
         width: 100%;
+        height: 52%;
       }
 
       .content_reform--inner {
-        height: 116vh;
+        height: 100vh;
         color: #fff;
         background-color: #2c2c2c;
         width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
       }
       .content_reform--item {
         color: #fff;
-        margin-top: 6%;
         margin-left: 6%;
-        height: 500px;
+        height: 420px;
         line-height: 2;
         letter-spacing: 1px;
       }
       .content_reform--title {
+        padding-top: 3%;
         margin-bottom: 4%;
         font-size: 15px;
         letter-spacing: 2px;
@@ -993,21 +999,22 @@
       }
       .content_reform--img {
         width: 100%;
+        height: 51%;
       }
 
       /* footer */
       .footer {
+        text-align: center;
+        font-size: 13px;
+        font-weight: 700;
         background-color: #fff;
+        padding: 16px 0;
       }
       .footer_menu {
         display: none;
       }
       .copyRight {
-        height: 60px;
-        color: #C4C7CC;
-        font-size: 15px;
-        color: #292929;
-        text-align: center;
-        margin-top: 10%;
+        font-size: 10px;
+        color: #000;
       }
     }
