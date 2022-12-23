@@ -34,13 +34,18 @@
     align-items: center;
   }
   .gnav_list {
-    margin: 30% 0 20% 0;
     color: #000;
     font-size: 16px;
     text-align: center;
   }
+  .gnav_list--item:first-child {
+    margin-top: 0px;
+  }
   .gnav_list--item {
     margin-top: 80px;
+  }
+  .gnav_list--item:nth-child(4) {
+    margin-bottom: 80px;
   }
   .gnav_list--item:last-of-type {
     display: none;
@@ -479,7 +484,7 @@
     margin: 0 auto;
   }
   .form_item {
-    font-size: 13px;
+    font-size: 16px;
     padding: 20px 0;
   }
   .form_label {
