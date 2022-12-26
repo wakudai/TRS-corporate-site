@@ -12,10 +12,10 @@
 ul {
   list-style: none;
 }
- a {
+a {
   color: #2c2c2c;
   text-decoration: none;
- }
+}
 
 @media only screen and (min-width: 1025px){
   .wrapper {
@@ -39,16 +39,18 @@ ul {
     align-items: center;
   }
   .gnav_list {
-    margin: 30% 0 20% 0;
     color: #000;
     font-size: 16px;
     text-align: center;
   }
+  .gnav_list--item:first-child {
+    margin-top: 0px;
+  }
   .gnav_list--item {
     margin-top: 80px;
   }
-  .gnav_list--item:nth-child(1) {
-    margin-top: 0;
+  .gnav_list--item:nth-child(4) {
+    margin-bottom: 80px;
   }
   .gnav_list--item:last-of-type {
     display: none;
@@ -126,7 +128,7 @@ ul {
   }
 
   .overview_wrapper {
-    padding: 80px 80px 40px;
+    padding: 80px 80px 40px 80px;
   }
   .overview_ttlArea {
     text-align: center;
@@ -170,7 +172,7 @@ ul {
   }
   .overview_map {
     max-width: none;
-    padding: 40px 80px 80px;
+    padding: 40px 80px 80px 80px;
     display: block;
     text-align: center;
   }
