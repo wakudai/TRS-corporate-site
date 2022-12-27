@@ -71,13 +71,10 @@
     margin-top: 0px;
   }
   .gnav_list--item {
-    margin-top: 80px;
+    margin-top: 64px;
   }
-  .gnav_list--item:nth-child(4) {
-    margin-bottom: 80px;
-  }
-  .gnav_list--item:last-of-type {
-    display: none;
+  .gnav_list--item:last-child {
+    margin-bottom: 64px;
   }
   .btn_menu {
     display: none;
