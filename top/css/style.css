@@ -809,6 +809,7 @@
   .about_text--imp strong {
     font-size: 20px;
     line-height: 2.5;
+    display: block;
   }
   .about_text--imp strong span {
     margin-left: 20px;
