@@ -37,6 +37,15 @@
   transition: all .3s;
 }
 
+.kv_wrap {
+  position: relative;
+  background-image: url(../../images/img-kv.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
 .kv_ttl {
   font-family: snell Roundhand;
 }
@@ -93,14 +102,6 @@
   }
 
   /* kv */
-  .kv_wrap {
-    position: relative;
-    background-image: url(/images/img-kv.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-  }
   .kv_clear--box {
     background-color: #fff;
     height: 100vh;
@@ -179,7 +180,7 @@
   /* about */
   .about_wrap {
     width: 100%;
-    background-image: url(/images/img_logo_silver.png);
+    background-image: url(../../images/img_logo_silver.png);
     background-position: 57% center;
     background-size: 30%;
     background-repeat: no-repeat;
@@ -233,7 +234,7 @@
   /* contact */
   .contact_wrap {
     width: 100%;
-    background-image: url(/images/img_contact.jpg);
+    background-image: url(../../images/img_contact.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -395,14 +396,6 @@
   }
 
   /* kv */
-  .kv_wrap {
-    position: relative;
-    background-image: url(/images/img-kv.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-  }
   .kv_clear--box {
     background-color: #fff;
     height: 100vh;
@@ -480,7 +473,7 @@
   /* about */
   .about_wrap {
     width: 100%;
-    background-image: url(/images/img_logo_silver.png);
+    background-image: url(../../images/img_logo_silver.png);
     background-position: 50% center;
     background-size: 30%;
     background-repeat: no-repeat;
@@ -523,7 +516,7 @@
   /* contact */
   .contact_wrap {
     width: 100%;
-    background-image: url(/images/img_contact.jpg);
+    background-image: url(../../images/img_contact.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -706,14 +699,6 @@
   }
 
   /* kv */
-  .kv_wrap {
-    position: relative;
-    background-image: url(/images/img-kv.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-  }
   .kv_clear--box {
     background-color: #fff;
     height: 100vh;

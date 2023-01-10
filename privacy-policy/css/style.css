@@ -8,6 +8,15 @@
   font-weight: bold;
 }
 
+.kv {
+  height: 460px;
+  background-image: url(../../images/img_kv02.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
 @media only screen and (min-width: 1025px){
   .wrapper {
     display: flex;
@@ -16,7 +25,7 @@
   /* header */
   .header {
     height: 100vh;
-    background-color: #2c2c2c;
+    background-color: #fff;
     justify-content: space-between;
     position: fixed;
     z-index: 9999;
@@ -29,27 +38,26 @@
     display: flex;
     align-items: center;
   }
-  .header_logo img {
-    filter: drop-shadow(5px 5px 10px #fff);
-  }
   .gnav_list {
-    margin: 30% 0 20% 0;
-    color: #C4C7CC;
+    color: #000;
     font-size: 16px;
     text-align: center;
   }
-  .gnav_list--item {
-    margin-top: 80px;
+  .gnav_list--item:first-child {
+    margin-top: 0px;
   }
-  .gnav_list--item:last-of-type {
-    display: none;
+  .gnav_list--item {
+    margin-top: 64px;
+  }
+  .gnav_list--item:last-child {
+    margin-bottom: 64px;
   }
   .btn_menu {
     display: none;
   }
   .pc-copyRight {
     font-size: 10px;
-    color: #C4C7CC;
+    color: #000;
     text-align: center;
     padding: 0 10px;
   }
@@ -61,14 +69,6 @@
   }
 
   /* kv */
-  .kv {
-    height: 460px;
-    background-image: url(/images/scott-graham-OQMZwNd3ThU-unsplash.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-  }
   .kv_clear--box {
     background-color: #fff;
     height: 460px;
@@ -259,14 +259,6 @@
   }
 
   /* kv */
-  .kv {
-    height: 460px;
-    background-image: url(/images/scott-graham-OQMZwNd3ThU-unsplash.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-  }
   .kv_clear--box {
     background-color: #fff;
     height: 460px;
@@ -476,14 +468,6 @@
   }
 
   /* kv */
-  .kv {
-    height: 460px;
-    background-image: url(/images/scott-graham-OQMZwNd3ThU-unsplash.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-  }
   .kv_clear--box {
     background-color: #fff;
     height: 460px;
