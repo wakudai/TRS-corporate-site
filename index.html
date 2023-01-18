@@ -10,6 +10,11 @@
     <!-- 外部ファイルの読み込み -->
     <link rel="stylesheet" href="./top/css/app.css" />
     <link rel="stylesheet" href="https://use.typekit.net/rmg0sgc.css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round|Material+Icons+Sharp|Material+Icons+Two+Tone"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
     <!-- アイコン -->
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.ico">
@@ -44,6 +49,9 @@
             </div>
             <p class="pc-copyRight en">&copy;2023 TRS Inc. All Rights Reserved.</p>
         </header>
+        <div class="l-start">
+            <img src="./images/trs_logo.png" alt="株式会社TRSロゴ" class="l-start__img" />
+        </div>
         <main>
             <div class="kv_wrap">
                 <div class="kv_clear--box">
@@ -125,6 +133,19 @@
         $("#js-kv_first").addClass("fadeIn-title");
         $("#js-kv_second").addClass("fadeIn-title-second");
         $("#js-kv_third").addClass("fadeIn-title-third");
+
+        // ページ初期読み込み時アニメーション
+        $.when(
+            setTimeout(function () {
+                $(".l-start__img").fadeIn(1600);
+            }, 500),
+            setTimeout(function () {
+                $(".l-start").fadeOut(500);
+            }, 2500)
+        ).done(function () {
+            $(".p-firstView__title").addClass("fadeIn-title"); // MVタイトルフェードイン
+            $(".p-firstView__subtitle").addClass("fadeIn-subtitle"); //MVサブタイトルフェードイン
+        });
     }, false);
 </script>
 

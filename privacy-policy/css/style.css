@@ -114,34 +114,59 @@
     font-weight: bold;
   }
 
-  /* お問い合わせフォーム */
   .privacy_wrapper {
     padding: 80px;
+    background: #2c2c2c;
   }
   .privacy_ttlArea {
     text-align: center;
+    margin-bottom: 80px;
   }
   .privacy_ttl {
     position: relative;
     display: inline-block;
-    padding: 0 55px;
     margin: 0 auto;
     font-size: 48px;
+    color: #fff;
+    border-bottom: 2px solid #ccc;
   }
-  .privacy_ttl:before, .privacy_ttl:after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    display: inline-block;
-    width: 45px;
-    height: 5px;
-    background-color: black;
+  .privacy_lead {
+    color: #fff;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    line-height: 1.8;
+    letter-spacing: 1.6px;
+    font-size: 16px;
+    border-bottom: solid 1px #ccc;
   }
-  .privacy_ttl:before {
-    left:0;
+  .privacy_cont {
+    color: #fff;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: solid 1px #ccc;
   }
-  .privacy_ttl:after {
-    right: 0;
+  .privacy_cont:last-of-type {
+    border: none;
+  }
+  .privacy_cont h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  .privacy_text {
+    margin-bottom: 20px;
+  }
+  .privacy_cont ol li {
+    list-style-type: none;
+    counter-increment: cnt;
+    margin-bottom: 15px;
+    margin-left: 1.4em;
+    text-indent: -1.6em;
+  }
+  .privacy_cont ol li::before {
+    content: "(" counter(cnt) ") ";
+  }
+  .seitei {
+    text-align: right;
   }
 
   /* footer */
@@ -305,32 +330,58 @@
   }
   /* お問い合わせフォーム */
   .privacy_wrapper {
-    padding: 40px;
+    padding: 80px;
+    background: #2c2c2c;
   }
   .privacy_ttlArea {
     text-align: center;
+    margin-bottom: 40px;
   }
   .privacy_ttl {
     position: relative;
     display: inline-block;
-    padding: 0 55px;
     margin: 0 auto;
-    font-size: 24px;
+    font-size: 48px;
+    color: #fff;
+    border-bottom: 2px solid #ccc;
   }
-  .privacy_ttl:before, .privacy_ttl:after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    display: inline-block;
-    width: 45px;
-    height: 5px;
-    background-color: black;
+  .privacy_lead {
+    color: #fff;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    line-height: 1.8;
+    letter-spacing: 1.6px;
+    font-size: 16px;
+    border-bottom: solid 1px #ccc;
   }
-  .privacy_ttl:before {
-    left:0;
+  .privacy_cont {
+    color: #fff;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: solid 1px #ccc;
   }
-  .privacy_ttl:after {
-    right: 0;
+  .privacy_cont:last-of-type {
+    border: none;
+  }
+  .privacy_cont h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  .privacy_text {
+    margin-bottom: 20px;
+  }
+  .privacy_cont ol li {
+    list-style-type: none;
+    counter-increment: cnt;
+    margin-bottom: 15px;
+    margin-left: 1.4em;
+    text-indent: -1.6em;
+  }
+  .privacy_cont ol li::before {
+    content: "(" counter(cnt) ") ";
+  }
+  .seitei {
+    text-align: right;
   }
 
   /* footer */
@@ -515,31 +566,60 @@
   /* お問い合わせフォーム */
   .privacy_wrapper {
     padding: 24px;
+    background: #2c2c2c;
   }
   .privacy_ttlArea {
     text-align: center;
+    margin-bottom: 25px;
   }
   .privacy_ttl {
     position: relative;
     display: inline-block;
-    padding: 0 55px;
     margin: 0 auto;
     font-size: 22px;
+    color: #fff;
+    border-bottom: 2px solid #ccc;
   }
-  .privacy_ttl:before, .privacy_ttl:after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    display: inline-block;
-    width: 45px;
-    height: 5px;
-    background-color: black;
+  .privacy_lead {
+    color: #fff;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    line-height: 1.8;
+    letter-spacing: 1.6px;
+    font-size: 13px;
+    border-bottom: solid 1px #ccc;
   }
-  .privacy_ttl:before {
-    left:0;
+  .privacy_cont {
+    color: #fff;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: solid 1px #ccc;
   }
-  .privacy_ttl:after {
-    right: 0;
+  .privacy_cont:last-of-type {
+    border: none;
+  }
+  .privacy_cont h2 {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  .privacy_text {
+    margin-bottom: 20px;
+    font-size: 13px;
+  }
+  .privacy_cont ol li {
+    list-style-type: none;
+    counter-increment: cnt;
+    margin-bottom: 15px;
+    margin-left: 1.4em;
+    text-indent: -1.6em;
+    font-size: 13px;
+  }
+  .privacy_cont ol li::before {
+    content: "(" counter(cnt) ") ";
+  }
+  .seitei {
+    text-align: right;
+    font-size: 13px;
   }
 
   /* footer */

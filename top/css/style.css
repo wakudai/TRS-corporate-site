@@ -47,7 +47,27 @@
 }
 
 .kv_ttl {
-  font-family: snell Roundhand;
+  font-family: 'Pinyon Script';
+}
+
+.l-start {
+  background-color: #2c2c2c;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 9000;
+}
+.l-start__img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: none;
+  z-index: 9999;
+  width: 40%;
+  filter: drop-shadow(5px 5px 5px #aaa);
 }
 
 @media only screen and (min-width: 1025px){
@@ -61,7 +81,7 @@
     background-color: #fff;
     justify-content: space-between;
     position: fixed;
-    z-index: 9999;
+    z-index: 8000;
     width: 15%;
   }
   .header_logo {
@@ -112,7 +132,7 @@
   .fadeIn-title {
     animation-name: fadeIn-titleAnime;
     animation-duration: 3s;
-    animation-delay: 0.5s;
+    animation-delay: 3s;
     animation-fill-mode: forwards;
   }
   @keyframes fadeIn-titleAnime {
@@ -129,7 +149,7 @@
   .fadeIn-title-second {
     animation-name: fadeIn-titleAnime;
     animation-duration: 3s;
-    animation-delay: 1.5s;
+    animation-delay: 4s;
     animation-fill-mode: forwards;
   }
   @keyframes fadeIn-titleAnime {
@@ -146,7 +166,7 @@
   .fadeIn-title-third {
     animation-name: fadeIn-titleAnime;
     animation-duration: 3s;
-    animation-delay: 2.5s;
+    animation-delay: 5s;
     animation-fill-mode: forwards;
   }
   @keyframes fadeIn-titleAnime {
@@ -298,7 +318,7 @@
     display: flex;
     align-items: center;
     position: fixed;
-    z-index: 9999;
+    z-index: 7500;
   }
   .header_logo {
     width: 15%;
@@ -406,7 +426,7 @@
   .fadeIn-title {
     animation-name: fadeIn-titleAnime;
     animation-duration: 3s;
-    animation-delay: 0.5s;
+    animation-delay: 3s;
     animation-fill-mode: forwards;
   }
   @keyframes fadeIn-titleAnime {
@@ -423,7 +443,7 @@
   .fadeIn-title-second {
     animation-name: fadeIn-titleAnime;
     animation-duration: 3s;
-    animation-delay: 1.5s;
+    animation-delay: 4s;
     animation-fill-mode: forwards;
   }
   @keyframes fadeIn-titleAnime {
@@ -440,7 +460,7 @@
   .fadeIn-title-third {
     animation-name: fadeIn-titleAnime;
     animation-duration: 3s;
-    animation-delay: 2.5s;
+    animation-delay: 5s;
     animation-fill-mode: forwards;
   }
   @keyframes fadeIn-titleAnime {
@@ -594,7 +614,13 @@
   }
 }
 
-@media only screen and (max-width: 767px){
+@media only screen and (max-width: 767px) {
+
+  /* TOP起動時のアニメーション */
+  .l-start__img {
+    width: 80%;
+  }
+
   /* header */
   .header {
     height: 65px;
@@ -602,7 +628,7 @@
     display: flex;
     align-items: center;
     position: fixed;
-    z-index: 9999;
+    z-index: 7000;
   }
   .header_logo {
     width: 18%;
@@ -709,7 +735,7 @@
   .fadeIn-title {
     animation-name: fadeIn-titleAnime;
     animation-duration: 3s;
-    animation-delay: 0.5s;
+    animation-delay: 3s;
     animation-fill-mode: forwards;
   }
   @keyframes fadeIn-titleAnime {
@@ -726,7 +752,7 @@
   .fadeIn-title-second {
     animation-name: fadeIn-titleAnime;
     animation-duration: 3s;
-    animation-delay: 1.5s;
+    animation-delay: 4s;
     animation-fill-mode: forwards;
   }
   @keyframes fadeIn-titleAnime {
@@ -743,7 +769,7 @@
   .fadeIn-title-third {
     animation-name: fadeIn-titleAnime;
     animation-duration: 3s;
-    animation-delay: 2.5s;
+    animation-delay: 5s;
     animation-fill-mode: forwards;
   }
   @keyframes fadeIn-titleAnime {
@@ -826,7 +852,7 @@
   /* contact */
   .contact_wrap {
     width: 100%;
-    background-image: url(/images/img_contact.jpg);
+    background-image: url(../../images/img_contact.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
