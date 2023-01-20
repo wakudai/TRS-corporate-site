@@ -224,6 +224,10 @@
     letter-spacing: 1.6px;
     font-size: 16px;
   }
+  .about_text span {
+    display: block;
+    margin-top: 40px;
+  }
   .about_text--imp {
     line-height: 1.8;
     margin-bottom: 40px;
